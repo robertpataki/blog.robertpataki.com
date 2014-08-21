@@ -1,0 +1,14 @@
+{
+    "folders":
+    [
+      {
+        "folder_exclude_patterns":
+        [
+          ".pygments-cache",
+          ".sass-cache",
+          ".themes/classic"
+        ],
+        "path": "./"
+      }
+    ]
+}
