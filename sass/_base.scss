@@ -1,0 +1,35 @@
+body, html {
+	margin: 0;
+	background: #EFEFEF;
+}
+
+body {
+	@extend .font-body;
+	@include rempix(font-size, 21px);
+	color: $color-body-text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h1, h2, h3 {
+	@extend .font-headline;
+}
+
+h2, h3, h4 {
+	color: $color-headline-text;
+}
+
+p, ol, ul {
+	font-weight: 400;
+}
+
+a:link,
+a:focus,
+a:hover,
+a:active,
+a:visited {
+	color: inherit;
+	text-decoration: none;
+}

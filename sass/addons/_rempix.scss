@@ -1,0 +1,42 @@
+/* 
+ * PX and REM unit conversion function
+ * taken from http://davidwalsh.name/rem-px-browser-function-sass
+ * and from http://codepen.io/HugoGiraudel/pen/xsKdH (more up to date)
+ * And added some custom updates, so that the font-size is flexible and
+ * actually works with other values than 10px too.
+*/
+$font-size: 16px;
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rempix($property, $values) {
+  $px : ();
+  $rem: ();
+  
+  @each $value in $values {
+   
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+    
+    @else { 
+      $unit: unit($value);
+      $val: parseInt($value);
+      
+      @if $unit == "px" {
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / parseInt($font-size) * 1rem));
+      }
+      
+      @if $unit == "rem" {
+        $px : append($px,  ($val * $font-size));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+  
+  #{$property}: $px;
+  #{$property}: $rem;
+}
