@@ -4,11 +4,6 @@
 	@include rempix(font-size, 21px);
 }
 
-.hero {
-	@include rempix(height, 420px);
-	background-color: #222;
-	background-image: url(../images/test.jpg);
-	background-size: cover;
-	background-position: 50% 20%;
-	background-attachment: fixed;
+.post-date {
+	display: none;
 }

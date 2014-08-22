@@ -2,13 +2,12 @@
 layout: default
 single: true
 ---
-  <div id="content">
+  {% if page.hero %}
+  <div class="hero">HERO!</div>
+  {% endif %}
+
+  <div id="content" {% if page.hero %} class="has-hero l-content" {% else %} class="l-content" {% endif %}>
     {% include article.html %}
-      <p class="post-date">
-        {% include post/author.html %}
-        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-        {% include post/categories.html %}
-      </p>
      <div>
        <p class="meta">
         {% if page.previous.url %}

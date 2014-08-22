@@ -3,7 +3,19 @@
 	@include rempix(height, 75px);
 	@include rempix(line-height, 75px);
 	background: $color-header-background;
+	position: fixed;
+	z-index: 1000;
 }
 .l-row {
 	@include rempix(padding, 0 30px);
+}
+
+.l-main {
+	@include rempix(padding-top, 75px);
+}
+
+.l-content {
+	@include rempix(max-width, 900px);
+	@include rempix(padding, 0 30px);
+	margin: 0 auto;
 }
