@@ -3,7 +3,7 @@ layout: default
 single: true
 ---
   {% if page.hero %}
-  <div class="hero">HERO!</div>
+  <div class="hero" style="background-image: url({{page.hero}})"></div>
   {% endif %}
 
   <div id="content" {% if page.hero %} class="has-hero l-content" {% else %} class="l-content" {% endif %}>

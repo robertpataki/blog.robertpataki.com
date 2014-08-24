@@ -1,0 +1,36 @@
+.subnav {
+	float: right;
+	display: inline-block;
+	@include rempix(line-height, $metrics-header-height);
+	@include rempix(height, $metrics-header-height);
+	vertical-align: middle;
+
+	.subnav_buttons {
+		@extend .list-nostyle;
+		@extend .list-inline;
+		@include rempix(line-height, $metrics-subnav-button-size);
+		@include rempix(height, $metrics-subnav-button-size);
+	}
+
+	.subnav_button {
+		@include rempix(width, $metrics-subnav-button-size);
+		@include rempix(height, $metrics-subnav-button-size);
+		@include rempix(line-height, $metrics-subnav-button-size);
+		vertical-align: middle;
+		text-align: center;
+		border: 1px solid $color-highlighted-text;
+		color: $color-highlighted-text;
+
+		&:not(:last-child) {
+			@include rempix(margin-right, $metrics-subnav-button-size * 0.25);
+		}
+
+		a {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+}

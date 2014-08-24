@@ -2,7 +2,7 @@
 layout: post
 title: "Stuffed Portobello Mushrooms"
 intro: "Vegan recipe using shrooms"
-hero: "images/test.jpg"
+hero: "/images/test.jpg"
 date: 2014-08-21 15:18:40 +0100
 comments: true
 categories: vegan recipe

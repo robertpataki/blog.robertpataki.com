@@ -2,6 +2,7 @@
 	color: $color-highlighted-text;
 	line-height: inherit;
 	@include rempix(font-size, 21px);
+	display: inline-block;
 }
 
 .post-date {

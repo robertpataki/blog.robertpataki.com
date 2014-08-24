@@ -1,6 +1,5 @@
 .hero {
 	@include rempix(height, 420px);
-	background-image: url(../images/test.jpg);
 	background-size: cover;
 	background-position: 50% 20%;
 	background-attachment: fixed;

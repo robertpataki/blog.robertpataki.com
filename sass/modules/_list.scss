@@ -1,0 +1,19 @@
+.list-nostyle {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.list-inline {
+	display: inline-block;
+
+	li {
+		@include rempix(top, -1px);
+		display: inline-block;
+	}
+}

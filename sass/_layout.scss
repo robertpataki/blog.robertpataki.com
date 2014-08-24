@@ -1,21 +1,21 @@
 .l-header {
 	width: 100%;
-	@include rempix(height, 75px);
-	@include rempix(line-height, 75px);
+	@include rempix(height, $metrics-header-height);
+	@include rempix(line-height, $metrics-header-height);
 	background: $color-header-background;
 	position: fixed;
 	z-index: 1000;
 }
 .l-row {
-	@include rempix(padding, 0 30px);
+	@include rempix(padding, 0 $metrics-site-side-margin);
 }
 
 .l-main {
-	@include rempix(padding-top, 75px);
+	@include rempix(padding-top, $metrics-header-height);
 }
 
 .l-content {
 	@include rempix(max-width, 900px);
-	@include rempix(padding, 0 30px);
+	@include rempix(padding, 0 $metrics-site-side-margin);
 	margin: 0 auto;
 }
