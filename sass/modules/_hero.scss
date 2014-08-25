@@ -9,7 +9,6 @@
 	padding-top: 0;
 	
 	.post-title {
-		position: relative;
 		@extend .font-headline-large;
 		@include rempix(top, -120px);
 		@include rempix(margin-left, -36px);

@@ -16,8 +16,8 @@
 }
 
 .post-container {
-	border: 1px solid $color-body-text;
-	@include rempix(padding, 12px);
+	border: 1px solid #FFF;
+	@include rempix(padding, 42px);
 
 	&:not(:last-child) {
 		@include rempix(margin-bottom, 15px);
@@ -27,4 +27,10 @@
 .entry-content {
 	@include span-columns(8);
 	@include shift(2);
+}
+
+.post-title {
+	@extend .font-headline-large;
+	color: $color-headline-text;
+	@include rempix(font-size, 42px);
 }
