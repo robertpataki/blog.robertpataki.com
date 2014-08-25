@@ -1,4 +1,5 @@
 require 'bourbon-compass'
+require 'neat-compass'
 require 'sass-globbing'
 
 # Require any additional compass plugins here.

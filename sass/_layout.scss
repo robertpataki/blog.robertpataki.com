@@ -10,12 +10,12 @@
 	@include rempix(padding, 0 $metrics-site-side-margin);
 }
 
-.l-main {
+.l-section {
+	@include outer-container;
 	@include rempix(padding-top, $metrics-header-height);
 }
-
-.l-content {
-	@include rempix(max-width, 900px);
+.l-contents {
+	@include span-columns(12);
 	@include rempix(padding, 0 $metrics-site-side-margin);
 	margin: 0 auto;
 }

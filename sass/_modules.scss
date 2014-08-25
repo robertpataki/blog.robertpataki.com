@@ -8,3 +8,23 @@
 .post-date {
 	display: none;
 }
+
+.articles {
+	@include span-columns(9);
+	@include shift(1.5);
+	@include rempix(padding-top, 45px);
+}
+
+.post-container {
+	border: 1px solid $color-body-text;
+	@include rempix(padding, 12px);
+
+	&:not(:last-child) {
+		@include rempix(margin-bottom, 15px);
+	}
+}
+
+.entry-content {
+	@include span-columns(8);
+	@include shift(2);
+}

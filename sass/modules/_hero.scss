@@ -6,6 +6,8 @@
 }
 
 .has-hero {
+	padding-top: 0;
+	
 	.post-title {
 		position: relative;
 		@extend .font-headline-large;

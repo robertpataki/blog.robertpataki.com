@@ -1,3 +1,5 @@
+$metrics-subnav-button-size: 60px;
+
 .subnav {
 	float: right;
 	display: inline-block;
@@ -22,7 +24,8 @@
 		color: $color-highlighted-text;
 
 		&:not(:last-child) {
-			@include rempix(margin-right, $metrics-subnav-button-size * 0.25);
+			border-right: none;
+			margin-right: -4px;
 		}
 
 		a {

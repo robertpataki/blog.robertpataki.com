@@ -9,6 +9,9 @@
 /* Site-wide color scheme */
 @import "variables";
 
+/* Grid (Important to get it right after the grid settings, which is in variables) */
+@import "neat/neat";
+
 /* Fonts */
 @import "fonts";
 

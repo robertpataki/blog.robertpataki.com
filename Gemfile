@@ -14,6 +14,7 @@ group :development do
   gem 'stringex', '~> 1.4.0'
   gem 'compass', '~> 1.0.1'
   gem 'bourbon-compass', '~> 4.0.2'
+  gem 'neat-compass', '~> 1.6.0'
 end
 
 gem 'sinatra', '~> 1.4.2'

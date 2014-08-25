@@ -34,6 +34,10 @@ p, ol, ul {
 	font-weight: 400;
 }
 
+article {
+	@include rempix(margin-bottom, 24px);
+}
+
 a:link,
 a:focus,
 a:hover,

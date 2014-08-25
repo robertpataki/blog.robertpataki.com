@@ -1,21 +1,25 @@
 ---
 layout: default
 ---
-	<div id="content">
-		{% for post in paginator.posts %}
-		{% assign index = true %}
-		{% assign title = post.title %}
-		{% assign intro = post.intro %}
-		{% assign date_text = post.date_text %}
-		{% assign category = post.categories %}
-		<article class="post-container">{% include article_intro.html %}</article>
-		{% endfor %}
-		<div class="pagination">
-			{% if paginator.next_page %}
-			<a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
-			{% endif %}
-			{% if paginator.previous_page %}
-			<a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
-			{% endif %}
+	<div class="l-section">
+		<div id="content" class="l-contents">
+			<div class="articles">
+				{% for post in paginator.posts %}
+				{% assign index = true %}
+				{% assign title = post.title %}
+				{% assign intro = post.intro %}
+				{% assign date_text = post.date_text %}
+				{% assign category = post.categories %}
+				<article class="post-container">{% include article_intro.html %}</article>
+				{% endfor %}
+			</div>
+			<div class="pagination">
+				{% if paginator.next_page %}
+				<a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+				{% endif %}
+				{% if paginator.previous_page %}
+				<a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+				{% endif %}
+			</div>
 		</div>
 	</div>
