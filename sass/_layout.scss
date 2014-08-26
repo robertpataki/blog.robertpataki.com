@@ -22,6 +22,6 @@
 }
 .l-contents {
 	@include span-columns(12);
-	@include rempix(padding, 0 $metrics-site-side-margin);
+	@include rempix(padding, 0 $metrics-site-side-margin 72px 0);
 	margin: 0 auto;
 }

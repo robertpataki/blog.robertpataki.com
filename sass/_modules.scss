@@ -17,14 +17,25 @@
 
 .post-container {
 	background: $color-header-background;
-	@include rempix(padding, 24px 42px);
+
+	a {
+		@include rempix(padding, 24px 42px);
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
 
 	&:not(:last-child) {
 		@include rempix(margin-bottom, 15px);
 	}
 
 	&:hover {
-		border-right: 24px solid $color-highlighted-text;
+		a {
+			border-right: 24px solid $color-go-green;
+		}
 	}
 }
 
@@ -44,4 +55,16 @@
 	color: $color-highlighted-text;
 	font-size: 60%;
 	@include rempix(margin, -10px auto 20px auto);
+}
+
+.footer-contents {
+	@include span-columns(6);
+	@include shift(3);
+	color: $color-body-text-invert;
+	@include rempix(padding-top, 100px);
+	text-align: center;
+
+	a {
+		text-decoration: underline;
+	}
 }
