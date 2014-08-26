@@ -10,7 +10,7 @@
 }
 .l-footer {
 	@include rempix(height, $metrics-footer-height);
-	background: $color-body-text-deep;
+	background: $color-highlighted-text;
 }
 .l-row {
 	@include rempix(padding, 0 $metrics-site-side-margin);

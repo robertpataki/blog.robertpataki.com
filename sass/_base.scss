@@ -40,7 +40,6 @@ p, ol, ul {
 
 article {
 	@include rempix(padding-bottom, 72px);
-	background-color: $color-site-background;
 }
 
 a:link,
