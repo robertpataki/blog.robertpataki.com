@@ -5,6 +5,12 @@
 	background: $color-header-background;
 	position: fixed;
 	z-index: 1000;
+	@include user-select(none);
+	border-bottom: 2px solid $color-site-background;
+}
+.l-footer {
+	@include rempix(height, $metrics-footer-height);
+	background: $color-body-text-deep;
 }
 .l-row {
 	@include rempix(padding, 0 $metrics-site-side-margin);

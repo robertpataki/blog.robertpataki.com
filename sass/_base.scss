@@ -35,7 +35,8 @@ p, ol, ul {
 }
 
 article {
-	@include rempix(margin-bottom, 24px);
+	@include rempix(padding-bottom, 72px);
+	background-color: $color-site-background;
 }
 
 a:link,

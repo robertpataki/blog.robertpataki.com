@@ -12,9 +12,11 @@ $color-site-background: #EFEFEF;
 $color-header-background: #FFFFFF;
 $color-highlighted-text: #FD665C;
 $color-body-text: #2C3F68;
+$color-body-text-deep: #0b152E;
 $color-headline-text: #588EED;
 $color-hero-headline: #FFFFFF;
 
 /* Metrics */
 $metrics-site-side-margin: 30px;
 $metrics-header-height: 75px;
+$metrics-footer-height: $metrics-header-height * 3;
