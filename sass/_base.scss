@@ -7,6 +7,10 @@ body {
 	@extend .font-body;
 	@include rempix(font-size, 21px);
 	color: $color-body-text;
+
+	background-image: inline-image("vinyl.jpg");
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 * {

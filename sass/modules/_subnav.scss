@@ -27,6 +27,7 @@ $metrics-subnav-button-size: 51px;
 		&:not(:last-child) {
 			@include rempix(margin-right, 8px);
 		}
+		
 		/*
 		&:not(:last-child) {
 			border-right: none;

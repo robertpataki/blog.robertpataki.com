@@ -16,11 +16,15 @@
 }
 
 .post-container {
-	border: 1px solid #FFF;
-	@include rempix(padding, 42px);
+	background: $color-header-background;
+	@include rempix(padding, 24px 42px);
 
 	&:not(:last-child) {
 		@include rempix(margin-bottom, 15px);
+	}
+
+	&:hover {
+		border-right: 24px solid $color-highlighted-text;
 	}
 }
 
@@ -33,4 +37,11 @@
 	@extend .font-headline-large;
 	color: $color-headline-text;
 	@include rempix(font-size, 42px);
+}
+
+.post-date-intro {
+	@extend .font-headline;
+	color: $color-highlighted-text;
+	font-size: 60%;
+	@include rempix(margin, -10px auto 20px auto);
 }
