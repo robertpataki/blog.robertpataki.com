@@ -56,6 +56,11 @@
 	}
 }
 
+.link {
+	color: $color-highlighted-text;
+	text-decoration: underline;
+}
+
 .footer-contents {
 	@include span-columns(6);
 	@include shift(3);
