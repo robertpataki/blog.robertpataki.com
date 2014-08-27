@@ -1,5 +1,16 @@
-<a href="{{ post.url }}" title="{{ title }}">
+<a href="{{ post.url }}" title="{{ title }}" class="big-link">
 	<h1 class="post-title">{{ title }}</h1>
-	<div class="post-date-intro">{{ date_text }}</div>
-	<div>{{ intro }}</div>
+	<div class="row">
+		<div class="post-meta-intro">
+			<div class="post-date-intro">{{ date_text }}</div>
+			{% if category != '0' %}
+			<div class="post-categories">
+				{% for category in post.categories %}
+		  			<span class="post-category">{{ category }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	<div class="row">{{ intro }}</div>
 </a>

@@ -18,7 +18,7 @@
 .post-container {
 	background: $color-header-background;
 
-	a {
+	.big-link {
 		@include rempix(padding, 24px 42px);
 		position: relative;
 		display: block;
@@ -33,7 +33,7 @@
 	}
 
 	&:hover {
-		a {
+		.big-link {
 			border-right: 24px solid $color-go-green;
 		}
 	}
@@ -50,13 +50,6 @@
 	@include rempix(font-size, 42px);
 }
 
-.post-date-intro {
-	@extend .font-headline;
-	color: $color-highlighted-text;
-	font-size: 60%;
-	@include rempix(margin, -10px auto 20px auto);
-}
-
 .footer-contents {
 	@include span-columns(6);
 	@include shift(3);
@@ -67,4 +60,31 @@
 	a {
 		text-decoration: underline;
 	}
+}
+
+/* Article intro */
+.post-meta-intro {
+	display: block;
+	@include rempix(margin, -6px auto 20px auto);
+	@include clearfix;
+}
+.post-categories {
+	float: left;
+	@include rempix(margin, -3px 0 0 8px);
+}
+.post-category {
+	@include rempix(padding, 2px 6px 4px 6px);
+	border-radius: 2px;
+	background: $color-body-text;
+	color: $color-body-text-invert;
+	font-size: 51%;
+	@extend .font-headline;
+	font-weight: 200;
+	opacity: 0.3;
+}
+.post-date-intro {
+	@extend .font-headline;
+	color: $color-highlighted-text;
+	font-size: 60%;
+	float: left;
 }

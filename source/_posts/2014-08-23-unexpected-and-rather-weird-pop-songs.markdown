@@ -5,5 +5,5 @@ intro: "I am not sure at all what to think about the upcoming Tosca album's firs
 hero: "/images/test4.jpg"
 date: 2014-08-23 20:55:18 +0100
 comments: true
-categories: 
+categories: music
 ---
