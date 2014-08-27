@@ -8,7 +8,7 @@ comments: true
 categories: vegan recipe
 ---
 
-<p class="post-intro">Synergistically e-enable compelling materials without economically sound experiences. Proactively implement revolutionary metrics vis-a-vis cutting-edge portals. Rapidiously productize optimal imperatives with customized channels. Authoritatively fashion long-term high-impact human capital without flexible information. Quickly communicate multifunctional imperatives via inexpensive core competencies. Objectively incentivize premier value and professional schemas. Energistically procrastinate visionary functionalities after cross-media solutions.</p>
+<p class="post-intro">The other day I stumbled accross a very nice <a class="link" href="http://blog.fatfreevegan.com/2008/08/roasted-eggplant-almond-dip.html" target="_blank">vegan recipe</a>. After trying the recipe for this delicious dip I wanted to see how I could alter it, so that it makes a stuffing for mushrooms. After I replaced the eggplants with courgettes, and I did some minor alterations I was very happy with the results, so I thought I'd share this tasty vegan recipe with others.</p>
 
 
 ## Ingredients (for 4)
