@@ -14,7 +14,7 @@ $metrics-subnav-button-size: $metrics-header-height * 0.69;
 		@include rempix(height, $metrics-subnav-button-size);
 
 		/* Use negative value to eliminate the push down caused by the border */
-		@include rempix(top, -2px);
+		@include rempix(top, -1px);
 	}
 
 	.subnav_button {
@@ -26,16 +26,9 @@ $metrics-subnav-button-size: $metrics-header-height * 0.69;
 		border: 1px solid $color-highlighted-text;
 		color: $color-highlighted-text;
 
-
 		&:not(:last-child) {
 			@include rempix(margin-right, $metrics-subnav-button-size * 0.0625);
 		}
-		
-		/*
-		&:not(:last-child) {
-			border-right: none;
-			margin-right: -4px;
-		} */
 
 		a {
 			position: absolute;

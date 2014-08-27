@@ -2,7 +2,7 @@
 layout: default
 index_view: true
 ---
-	<div class="l-section">
+	<div class="l-section row">
 		<div id="content" class="l-contents">
 			<div class="articles">
 				{% for post in paginator.posts %}
@@ -14,13 +14,7 @@ index_view: true
 				<article class="post-container">{% include article_intro.html %}</article>
 				{% endfor %}
 			</div>
-			<div class="pagination">
-				{% if paginator.next_page %}
-				<a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
-				{% endif %}
-				{% if paginator.previous_page %}
-				<a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
-				{% endif %}
-			</div>
+
+			{% include paginav.html %}
 		</div>
 	</div>

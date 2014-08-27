@@ -1,0 +1,21 @@
+<nav class="paginav">
+	<ul class="paginav_buttons">
+		<li {% if paginator.next_page %} class="paginav_button paginav_button-next" {% else %} class="paginav_button paginav_button-next is-disabled" {% endif %}>
+			{% if paginator.next_page %}
+				<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older posts</a>
+			{% else %}
+				<a href="#">Older posts</a>
+			{% endif %}
+		</li>
+		<li class="paginav_button paginav_button-pages">
+			{{ paginator.page }} / {{ paginator.total_pages }}
+		</li>
+		<li {% if paginator.previous_page %} class="paginav_button paginav_button-prev" {% else %} class="paginav_button paginav_button-prev is-disabled" {% endif %}>
+			{% if paginator.previous_page %}
+				<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer posts</a>
+			{% else %}
+				<a href="#">Newer posts</a>
+			{% endif %}
+		</li>
+	</ul>
+</nav>
