@@ -3,11 +3,13 @@
 @import "bourbon/bourbon";
 
 /* Addons */
-@import "addons/normalize";
+// @import "addons/normalize";
 @import "addons/rempix";
 
 /* Site-wide color scheme */
 @import "variables";
+
+@import "vertical_rythm";
 
 /* Grid (Important to get it right after the grid settings, which is in variables) */
 @import "neat/neat";

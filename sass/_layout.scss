@@ -23,6 +23,6 @@
 }
 .l-contents {
 	@include span-columns(12);
-	@include rempix(padding, 0 $metrics-site-side-margin 72px 0);
+	@include rempix(padding, 0 $metrics-site-side-margin $metrics-site-side-margin * 1.5 $metrics-site-side-margin);
 	margin: 0 auto;
 }

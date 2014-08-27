@@ -1,0 +1,47 @@
+/* Vertical rythm */
+$base-font-size: 21px;
+$base-line-height: 31px;
+$rhythm-unit: "rem";
+
+$h1-fz: 43px;
+$h1-2-fz: 35px;
+$h2-fz: 27px;
+$h3-fz: 25px;
+$h4-fz: 23px;
+$h5-fz: 21px;
+$h6-fz: 19px;
+
+h1 {
+  @include adjust-font-size-to($h1-fz);
+}
+
+h2 {
+  @include adjust-font-size-to($h2-fz);
+  margin: rhythm(2) 0 rhythm(1) 0;
+}
+
+h3 {
+  @include adjust-font-size-to($h3-fz);
+}
+
+h4 {
+  @include adjust-font-size-to($h4-fz);
+}
+
+h5 {
+  @include adjust-font-size-to($h5-fz);
+}
+
+h6 {
+  @include adjust-font-size-to($h6-fz);
+}
+
+p {
+	margin: rhythm(1) 0;
+}
+
+ul, ol, dl {
+	padding-left: rhythm(1);
+}
+
+@include establish-baseline;

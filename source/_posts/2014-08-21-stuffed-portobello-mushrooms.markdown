@@ -3,19 +3,21 @@ layout: post
 title: "Stuffed Portobello Mushrooms"
 intro: "Vegan recipe using shrooms"
 hero: "/images/test.jpg"
-date: 2014-08-21 15:18:40 +0100
+date: 2014-08-27 10:18:40 +0100
 comments: true
 categories: vegan recipe
 ---
+
+<p class="post-intro">Synergistically e-enable compelling materials without economically sound experiences. Proactively implement revolutionary metrics vis-a-vis cutting-edge portals. Rapidiously productize optimal imperatives with customized channels. Authoritatively fashion long-term high-impact human capital without flexible information. Quickly communicate multifunctional imperatives via inexpensive core competencies. Objectively incentivize premier value and professional schemas. Energistically procrastinate visionary functionalities after cross-media solutions.</p>
 
 
 ## Ingredients (for 4)
 
    * 4 portobello mushrooms
    * 1 cup of brown rice
-   * 1/2 table spoons of coconut fat (or olive oil)
+   * 1/2 table spoon of coconut fat (or olive oil)
 
-## Ingredients for the sauce:
+## Ingredients for the sauce
 
    * 2 medium sized courgettes
    * 4 gloves of garlic
@@ -28,7 +30,7 @@ categories: vegan recipe
    * 1 table spoon of co-yo or soya yoghurt
    * salt, cayenne pepper, black pepper to taste
 
-## Preparation and cooking:
+## Preparation and cooking
 
   1. Put the almond and the mustard seeds in a medium sized cooking pan and toast them slightly until the mustard seeds start to pop. Once they are done put them in the blender bowl.
 

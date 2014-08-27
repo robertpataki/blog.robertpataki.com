@@ -1,5 +1,5 @@
 .hero {
-	@include rempix(height, 510px);
+	@include rempix(height, 320px);
 	background-size: cover;
 	background-position: 50% 20%;
 	background-attachment: fixed;
@@ -10,17 +10,16 @@
 	
 	.post-title {
 		@extend .font-headline-large;
-		@include rempix(top, -120px);
-		@include rempix(margin-left, -36px);
-		@include rempix(font-size, 42px);
-		@include rempix(padding, 12px 36px);
-		display: inline;
+		top: rhythm(-2);
+		margin-left: rhythm(-1);
+		padding: rhythm(0.5) rhythm(1);
+		display: inline-block;
 		color: $color-hero-headline;
 		background: rgba(0, 0, 0, 0.6);
 		border: 1px solid #FFF;
 	}
 
 	.entry-content {
-		@include rempix(margin-top, -30px);
+		margin-top: rhythm(-2);
 	}
 }

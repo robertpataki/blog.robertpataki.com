@@ -13,7 +13,6 @@
 	display: inline-block;
 
 	li {
-		@include rempix(top, -1px);
 		display: inline-block;
 	}
 }

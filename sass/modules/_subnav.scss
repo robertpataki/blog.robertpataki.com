@@ -1,4 +1,4 @@
-$metrics-subnav-button-size: 51px;
+$metrics-subnav-button-size: $metrics-header-height * 0.69;
 
 .subnav {
 	float: right;
@@ -12,6 +12,9 @@ $metrics-subnav-button-size: 51px;
 		@extend .list-inline;
 		@include rempix(line-height, $metrics-subnav-button-size);
 		@include rempix(height, $metrics-subnav-button-size);
+
+		/* Use negative value to eliminate the push down caused by the border */
+		@include rempix(top, -2px);
 	}
 
 	.subnav_button {
@@ -25,7 +28,7 @@ $metrics-subnav-button-size: 51px;
 
 
 		&:not(:last-child) {
-			@include rempix(margin-right, 8px);
+			@include rempix(margin-right, $metrics-subnav-button-size * 0.0625);
 		}
 		
 		/*
