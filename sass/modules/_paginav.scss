@@ -38,7 +38,7 @@
 	@include span-columns(4);
 	@include shift(1);
 	@extend .font-headline-large;
-	@include adjust-font-size-to($h1-3-fz);
+	@include adjust-font-size-to($h2-fz);
 	opacity: 0.72;
 	line-height: inherit;
 	top: rhythm(-0.5);
