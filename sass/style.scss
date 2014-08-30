@@ -1,26 +1,23 @@
-/* Compass and Bourbon */
+// Compass and Bourbon
 @import "compass";
 @import "bourbon/bourbon";
 
-/* Addons */
-// @import "addons/normalize";
+// Addons
 @import "addons/rempix";
 
-/* Site-wide color scheme */
+// Site-wide color scheme
 @import "variables";
 
 @import "vertical_rythm";
 
-/* Grid (Important to get it right after the grid settings, which is in variables) */
+//Grid (Important to get it right after the grid settings, which is in variables)
 @import "neat/neat";
 
-/* Fonts */
+// Fonts
 @import "fonts";
 
-/* Base */
 @import "base";
 @import "states";
-
 @import "layout";
 @import "icons";
 @import "modules";

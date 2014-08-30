@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Stuffed Portobello Mushrooms"
+title: "Stuffed portobello mushrooms"
 intro: "Vegan recipe using shrooms"
-hero: "/images/test.jpg"
+hero: "/images/posts/stuffed-portobello-mushrooms-hero.jpg"
+gallery: [stuffed-portobello-mushrooms]
 date: 2014-08-27 10:18:40 +0100
 comments: true
 categories: vegan recipe
@@ -42,8 +43,16 @@ categories: vegan recipe
 
   5. Place the rice in a medium sized pan on medium heat. Once the rice starts sizzling, pour water on it and bring to boil. Once boiling, add some salt, stir and cover the pan, and bring the heat down to minimum. After all the water is gone, bring off the heat and uncover.
 
+## Serving
+
 You can serve the meal with some fresh slices of cucumbers, parsley and tomatoes.
 
+{% img post-photo /images/posts/stuffed-portobello-mushrooms-2-preview.jpg [title text [alt text]] %}
+
+## Use up the leftover sauce as spread
+
 If there is any leftover sauce, put it in the fridge and you can have it on some fresh toast the next morning :)
+
+{% img post-photo /images/posts/stuffed-portobello-mushrooms-1-preview.jpg [title text [alt text]] %}
 
 Enjoy!

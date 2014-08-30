@@ -1,8 +1,10 @@
 .hero {
-	@include rempix(height, 320px);
+	@include rempix(height, 510px);
+	background-color: $color-go-green;
 	background-size: cover;
-	background-position: 50% 20%;
+	background-position: 50% 0;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 .has-hero {
