@@ -17,8 +17,8 @@
 }
 
 .articles {
-	@include span-columns(9);
-	@include shift(1.5);
+	@include span-columns(10);
+	@include shift(1);
 	@include rempix(padding-top, 45px);
 }
 
@@ -53,8 +53,8 @@
 }
 
 .entry-content {
-	@include span-columns(7);
-	@include shift(2.5);
+	@include span-columns(10);
+	@include shift(1);
 	* {
 		@include user-select(auto);
 	}
@@ -107,6 +107,12 @@
 .post-photo {
 	width: 100%;
 	height: auto;
+	padding: rhythm(0.1);
+	border: 1px solid lighten($color-body-text, 60%);
+}
+
+.post-intro {
+	// @extend .font-headline-large;
 }
 
 // States

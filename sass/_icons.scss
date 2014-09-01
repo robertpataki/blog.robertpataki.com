@@ -1,5 +1,6 @@
 .icon {
 	display: block;
+	position: absolute;
 	width: 80%;
 	height: 80%;
 	top: 10%;
@@ -14,4 +15,13 @@
 }
 .icon-cross {
 	background-image: inline-image("svg/icon-cross.svg");
+}
+.icon-arrow-left-active {
+	background-image: inline-image("svg/icon-arrow-left-active.svg");
+}
+.icon-arrow-right-active {
+	background-image: inline-image("svg/icon-arrow-right-active.svg");
+}
+.icon-cross-active {
+	background-image: inline-image("svg/icon-cross-active.svg");
 }

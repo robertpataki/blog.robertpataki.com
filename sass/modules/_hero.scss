@@ -1,5 +1,5 @@
 .hero {
-	@include rempix(height, 510px);
+	@include rempix(height, 630px);
 	background-color: $color-go-green;
 	background-size: cover;
 	background-position: 50% 0;
@@ -10,18 +10,25 @@
 .has-hero {
 	padding-top: 0;
 	
-	.post-title {
-		@extend .font-headline-large;
-		top: rhythm(-2);
-		margin-left: rhythm(-1);
-		padding: rhythm(0.5) rhythm(1);
-		display: inline-block;
-		color: $color-hero-headline;
-		background: rgba(0, 0, 0, 0.6);
-		border: 1px solid #FFF;
+	.l-contents {
+		top: rhythm(-4);
+		margin-bottom: rhythm(-4);
 	}
 
-	.entry-content {
-		margin-top: rhythm(-2);
+	.post-intro {
+		margin-top: rhythm(3);
+	}
+
+	.post-title {
+		@include shift(1);
+		
+		@extend .font-headline-large;
+		padding: rhythm(0.5) rhythm(1);
+		left: rhythm(-1);
+		right: rhythm(1);
+		display: inline-block;
+		background: rgba(0, 0, 0, 0.6);
+		border: 1px solid #FFF;
+		color: $color-hero-headline;
 	}
 }

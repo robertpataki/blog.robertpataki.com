@@ -1,13 +1,27 @@
-/* Grid settings */
-$visual-grid: false;
-$visual-grid-color: green;
-$visual-grid-index: front;
-$visual-grid-opacity: 0.03;
-$grid-columns: 12;
-$gutter: 1em;
-$max-width: em(980);
+// Typographic settings
+$base-font-size: 21px;
+$em-base: $base-font-size;
+$base-line-height: 31px;
+$rhythm-unit: "rem";
+$h1-fz: 	em(43);
+$h1-2-fz: 	em(37);
+$h1-3-fz: 	em(55);
+$h2-fz: 	em(27);
+$h3-fz: 	em(25);
+$h4-fz: 	em(23);
+$h5-fz: 	em(21);
+$h6-fz: 	em(19);
 
-/* Colours */
+// Grid settings
+$visual-grid: false;
+$visual-grid-color: blue;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.05;
+$grid-columns: 12;
+$gutter: em($base-font-size);
+$max-width: (960px / $base-font-size) + rem;
+
+// Colours
 $color-site-background: #EFEFEF;
 $color-header-background: #FFFFFF;
 $color-highlighted-text: #FD665C;
@@ -17,7 +31,7 @@ $color-headline-text: #588EED;
 $color-hero-headline: #FFFFFF;
 $color-go-green: #46BC78;
 
-/* Metrics */
+// Metrics
 $metrics-site-side-margin: 20px;
-$metrics-header-height: 51px;
+$metrics-header-height: 63px;
 $metrics-footer-height: $metrics-header-height * 3;

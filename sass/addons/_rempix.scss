@@ -5,7 +5,6 @@
  * And added some custom updates, so that the font-size is flexible and
  * actually works with other values than 10px too.
 */
-$font-size: 16px;
 @function parseInt($n) {
   @return $n / ($n * 0 + 1);
 }
@@ -27,11 +26,11 @@ $font-size: 16px;
       
       @if $unit == "px" {
         $px : append($px,  $value);
-        $rem: append($rem, ($val / parseInt($font-size) * 1rem));
+        $rem: append($rem, ($val / parseInt($base-font-size) * 1rem));
       }
       
       @if $unit == "rem" {
-        $px : append($px,  ($val * $font-size));
+        $px : append($px,  ($val * $base-font-size));
         $rem: append($rem, $value);
       }
     }

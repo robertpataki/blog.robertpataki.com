@@ -6,6 +6,7 @@ $(document).ready(function(){
 	var $main = $('.l-main');
 	var $window = $(window);
 	var $hero = $('.hero');
+	var $subnav = $('.subnav');
 	
 	var _onResize = function() {
 		// Fit the main content area to fill the height of the window if there isn't enough content

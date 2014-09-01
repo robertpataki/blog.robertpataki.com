@@ -1,5 +1,5 @@
+<h1 class="post-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
 <div class="entry-content">
-	<h1 class="post-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
 	{% unless page.meta == false %}
 	  <p class="post-date">
 	    {% include post/date.html %}{{ time }}

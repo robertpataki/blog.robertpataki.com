@@ -2,6 +2,7 @@
 	width: 100%;
 	@include rempix(height, $metrics-header-height);
 	@include rempix(line-height, $metrics-header-height);
+	@include rempix(padding, 0 $metrics-site-side-margin);
 	position: fixed;
 	z-index: 1000;
 	@include user-select(none);
@@ -10,13 +11,9 @@
 }
 .l-footer {
 	@include rempix(height, $metrics-footer-height);
-	border-bottom: 2px solid darken($color-highlighted-text, 3%);
+	@include rempix(padding, 0 $metrics-site-side-margin);
 	background: $color-highlighted-text;
 }
-.l-row {
-	@include rempix(padding, 0 $metrics-site-side-margin);
-}
-
 .l-section {
 	@include outer-container;
 	@include rempix(padding-top, $metrics-header-height);

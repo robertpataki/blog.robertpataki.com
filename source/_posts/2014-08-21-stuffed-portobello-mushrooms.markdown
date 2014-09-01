@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stuffed portobello mushrooms"
+title: "Cook: Stuffed portobello mushrooms"
 intro: "Vegan recipe using shrooms"
 hero: "/images/posts/stuffed-portobello-mushrooms-hero.jpg"
 gallery: [stuffed-portobello-mushrooms]

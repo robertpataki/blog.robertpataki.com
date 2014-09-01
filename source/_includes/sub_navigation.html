@@ -2,20 +2,29 @@
 	<ul class="subnav_buttons">
 		<li {% if page.previous.url %} class="subnav_button subnav_button-prev" {% else %} class="subnav_button subnav_button-prev is-disabled" {% endif %}>
 			{% if page.previous.url %}
-				<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><i class="icon icon-arrow-left"></i></a>
+				<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
+					<i class="icon icon-arrow-left"></i>
+					<i class="icon icon-arrow-left-active"></i>
+				</a>
 			{% else %}
 				<a href="#"><i class="icon icon-arrow-left"></i></a>
 			{% endif %}
 		</li>
 		<li {% if page.next.url %} class="subnav_button subnav_button-next" {% else %} class="subnav_button subnav_button-next is-disabled" {% endif %}>
 			{% if page.next.url %}
-				<a href="{{page.next.url}}" title="Previous Post: {{page.next.title}}"><i class="icon icon-arrow-right"></i></a>
+				<a href="{{page.next.url}}" title="Previous Post: {{page.next.title}}">
+					<i class="icon icon-arrow-right"></i>
+					<i class="icon icon-arrow-right-active"></i>
+				</a>
 			{% else %}
 				<a href="#"><i class="icon icon-arrow-right"></i></a>
 			{% endif %}
 		</li>
 		<li class="subnav_button subnav_button-close">
-			<a href="/"><i class="icon icon-cross"></i></a>
+			<a href="/">
+				<i class="icon icon-cross"></i>
+				<i class="icon icon-cross-active"></i>
+			</a>
 		</li>
 	</ul>
 </nav>
