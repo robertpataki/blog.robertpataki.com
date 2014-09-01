@@ -6,6 +6,21 @@
 	@include rempix(top, 2px);
 }
 
+.icon {
+	display: block;
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;
+
+	fill: $color-highlighted-text;
+
+	@include transition-property(fill);
+	@include transition-duration(0.15s);
+	@include animation-timing-function($ease-out-back);
+}
+
 .post-title {
 	@extend .font-headline-large;
 	color: $color-headline-text;

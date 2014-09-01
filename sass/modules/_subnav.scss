@@ -26,6 +26,10 @@ $metrics-subnav-button-size: $metrics-header-height * 0.63;
 		border: 1px solid $color-highlighted-text;
 		color: $color-highlighted-text;
 
+		@include transition-property(background-color, border-color);
+		@include transition-duration(0.15s);
+		@include animation-timing-function($ease-out-back);
+
 		&:not(:last-child) {
 			@include rempix(margin-right, $metrics-subnav-button-size * 0.0625);
 		}
@@ -36,6 +40,18 @@ $metrics-subnav-button-size: $metrics-header-height * 0.63;
 			height: 100%;
 			top: 0;
 			left: 0;
+		}
+	}
+}
+
+// States
+html:not(.touch) {
+	.subnav_button:hover {
+		border-color: $color-highlighted-text;
+		background-color: $color-highlighted-text;
+
+		.icon {
+			fill: $color-body-text-invert;
 		}
 	}
 }
