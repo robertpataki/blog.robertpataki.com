@@ -1,26 +1,26 @@
 h1 {
-  @include adjust-font-size-to($h1-fz);
+	@include adjust-font-size-to($h1-fz);
 }
 
 h2 {
-  @include adjust-font-size-to($h2-fz);
-  margin: rhythm(1.5) 0 rhythm(0.25) 0;
+	@include adjust-font-size-to($h2-fz);
+	margin: rhythm(1.5) 0 rhythm(0.25) 0;
 }
 
 h3 {
-  @include adjust-font-size-to($h3-fz);
+ 	@include adjust-font-size-to($h3-fz);
 }
 
 h4 {
-  @include adjust-font-size-to($h4-fz);
+	@include adjust-font-size-to($h4-fz);
 }
 
 h5 {
-  @include adjust-font-size-to($h5-fz);
+	@include adjust-font-size-to($h5-fz);
 }
 
 h6 {
-  @include adjust-font-size-to($h6-fz);
+	@include adjust-font-size-to($h6-fz);
 }
 
 p {

@@ -1,10 +1,19 @@
 .hero {
 	@include rempix(height, 630px);
 	background-color: $color-go-green;
-	background-size: cover;
-	background-position: 50% 0;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+	overflow: hidden;
+	@include rempix(padding-top, $metrics-header-height);
+
+	@include media($breakpoint-3-tablet-portrait) {
+	    @include rempix(height, 450px);
+	    padding-top: 0;
+	}
+	@include media($breakpoint-2-mobile-landscape) {
+	    @include rempix(height, 270px);
+	}
+	@include media($breakpoint-1-mobile-portrait) {
+	    @include rempix(height, 210px);
+	}
 }
 
 .has-hero {
@@ -19,9 +28,12 @@
 		margin-top: rhythm(3);
 	}
 
-	.post-title {
+	.entry-title {
+		@include span-columns(10);
 		@include shift(1);
-		
+	}
+
+	.post-title {
 		@extend .font-headline-large;
 		padding: rhythm(0.5) rhythm(1);
 		left: rhythm(-1);
@@ -30,5 +42,27 @@
 		background: rgba(0, 0, 0, 0.6);
 		border: 1px solid #FFF;
 		color: $color-hero-headline;
+
+		text-overflow: ellipsis;
+    	white-space: nowrap;
+		overflow: hidden;
+	}
+
+	@include media($breakpoint-3-tablet-portrait) {
+	    .post-title {
+	    	padding: rhythm(0.5 * 0.8) rhythm(0.8);
+	    }
+	}
+	@include media($breakpoint-2-mobile-landscape) {
+	    .post-title {
+	    	padding: rhythm(0.5 * 0.64) rhythm(0.64);
+	    }
+	}
+	@include media($breakpoint-1-mobile-portrait) {
+	    .post-title {
+	    	@include rempix(max-width, 240px);
+	    	padding: rhythm(0.5 * 0.512) rhythm(0.512);
+	    }
 	}
 }
+

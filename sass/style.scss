@@ -8,19 +8,23 @@
 // Site-wide color scheme
 @import "variables";
 
-@import "vertical_rythm";
-
 //Grid (Important to get it right after the grid settings, which is in variables)
 @import "neat/neat";
+@import "breakpoints";
+
+// Vertical rhythm
+@import "vertical_rythm";
 
 // Fonts
 @import "fonts";
 
 @import "base";
-@import "states";
 @import "layout";
 @import "modules";
+@import "modules/footer";
 @import "modules/list";
 @import "modules/hero";
 @import "modules/subnav";
 @import "modules/paginav";
+
+@import "states";

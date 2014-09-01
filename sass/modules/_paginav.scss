@@ -4,16 +4,27 @@
 	display: block;
 	clear: both;
 	margin-top: rhythm(1.5);
+	@include clearfix;
+
+    @include media($breakpoint-2-mobile-landscape) {
+        @include span-columns(8);
+		@include shift(0);
+    }
+	@include media($breakpoint-1-mobile-portrait) {
+        @include span-columns(4);
+		@include shift(0);
+    }
 }
 
 .paginav_buttons {
-	@include clearfix;
 	@extend .list-nostyle;
+	@include row(table);
 }
 
 .paginav_button {
-	@include span-columns(3);
-	font-size: 72%;
+	@include span-columns(4);
+	font-size: rhythm(0.5);
+	line-height: rhythm(2);
 	padding: rhythm(1) rhythm(2) !important;
 	@extend .font-headline;
 	font-weight: 200;
@@ -22,7 +33,6 @@
 	text-transform: uppercase;
 	text-align: center;
 	vertical-align: middle;
-	line-height: rhythm(2);
 
 	@include transition-property(border-color background-color);
 	@extend .animate-hover;
@@ -43,8 +53,7 @@
 	@extend .font-headline-large;
 	@include adjust-font-size-to($h2-fz);
 	opacity: 0.72;
-	line-height: inherit;
-	top: rhythm(-0.5);
+	line-height: rhythm(2);
 	z-index: 1000;
 }
 
@@ -52,10 +61,68 @@
 	@include shift(1);
 }
 
+.paginav_label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+
 // States
 html:not(.touch) {
 	.paginav_button:not(:nth-child(2)):hover {
 		border-color: $color-go-green;
 		background-color: $color-go-green;
+	}
+}
+
+@include media($breakpoint-2-mobile-landscape) {
+	.paginav_button {
+		position: relative;
+		margin: 0;
+	}
+
+	.paginav_button-next, 
+	.paginav_button-prev {
+    	@include span-columns(3);
+		@include shift(0);
+	}
+
+	.paginav_button-pages {
+		@include span-columns(2);
+	}
+
+	.paginav_label {
+		font-size: rhythm(0.5);
+		line-height: rhythm(2.1);
+	}
+}
+@include media($breakpoint-1-mobile-portrait) {
+    .paginav_buttons {
+		// @include row(block);
+		// margin-top: rhythm(1);
+	}
+
+    .paginav_button,
+    .paginav_button-pages,
+	.paginav_button-prev {
+    	// @include span-columns(4);
+		// @include shift(0);
+	}
+	.paginav_button {
+		font-size: rhythm(0.4);
+		line-height: rhythm(2.1);
+	}
+	.paginav_button-pages {
+		// position: absolute;
+		// margin-top: rhythm(-1.5);
+	}
+	.paginav_button-next {
+		// margin-top: rhythm(1);
+	}
+	.paginav_button-prev {
+		// margin-top: rhythm(0.5);
 	}
 }

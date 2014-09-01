@@ -6,8 +6,7 @@ body, html {
 body {
 	@extend .font-body;
 	color: $color-body-text;
-
-	background-image: inline-image("vinyl.jpg");
+	background-image: inline-image("vinyl-3.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 }

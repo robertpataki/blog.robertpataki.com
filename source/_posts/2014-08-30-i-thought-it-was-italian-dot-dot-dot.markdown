@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cook: Italian job done the Chinese way"
+title: "Italian job done the Chinese way"
 intro: "This is what happens when you go too experimental with an Italian dish"
 hero: "/images/posts/i-thought-it-was-italian-hero.jpg"
 date: 2014-08-30 22:00:24 +0100

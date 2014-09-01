@@ -21,12 +21,6 @@
 	fill: black;
 }
 
-.post-title {
-	@extend .font-headline-large;
-	color: $color-headline-text;
-	text-transform: capitalize;
-}
-
 .post-date {
 	display: none;
 }
@@ -35,6 +29,15 @@
 	@include span-columns(10);
 	@include shift(1);
 	@include rempix(padding-top, 45px);
+
+    @include media($breakpoint-2-mobile-landscape) {
+        @include span-columns(8);
+        @include shift(0);
+    }
+	@include media($breakpoint-1-mobile-portrait) {
+        @include span-columns(4);
+        @include shift(0);
+    }
 }
 
 .post-container {
@@ -57,14 +60,37 @@
 		@extend .animate-hover;
 	}
 
-	.post-title {
-		@include adjust-font-size-to($h1-2-fz);
+	.row {
+		@include transition-property(margin);
+		@extend .animate-hover;
 	}
+}
+
+.post-title {
+	@extend .font-headline-large;
+	color: $color-headline-text;
+	text-transform: capitalize;
+
+	@include adjust-font-size-to($h1-2-fz);
+
+	@include media($breakpoint-3-tablet-portrait) {
+	    @include adjust-font-size-to($h1-2-fz * 0.8);
+	}
+	@include media($breakpoint-2-mobile-landscape) {
+	    @include adjust-font-size-to($h1-2-fz * 0.64);
+	}
+	@include media($breakpoint-1-mobile-portrait) {
+	    @include adjust-font-size-to($h1-2-fz * 0.512);
+	}
+
+	@include transition-property(margin);
+	@extend .animate-hover;
 }
 
 .entry-content {
 	@include span-columns(10);
 	@include shift(1);
+
 	* {
 		@include user-select(auto);
 	}
@@ -73,18 +99,6 @@
 .link {
 	color: $color-highlighted-text;
 	text-decoration: underline;
-}
-
-.footer-contents {
-	@include span-columns(6);
-	@include shift(3);
-	color: $color-body-text-invert;
-	@include rempix(padding-top, $metrics-footer-height * 0.45);
-	text-align: center;
-
-	a {
-		text-decoration: underline;
-	}
 }
 
 // Article intro
@@ -121,16 +135,18 @@
 	border: 1px solid lighten($color-body-text, 60%);
 }
 
-.post-intro {
-	// @extend .font-headline-large;
-}
-
 // States
 html:not(.touch) {
 	.post-container {
 		&:hover {
 			.big-link {
 				box-shadow: 0 -12px 0 $color-go-green inset;
+			}
+			.post-title {
+				margin-top: -4px;
+			}
+			.row:nth-child(2n + 1) {
+				margin-bottom: 4px;
 			}
 		}
 	}
