@@ -24,11 +24,9 @@ $metrics-subnav-button-size: $metrics-header-height * 0.63;
 		vertical-align: middle;
 		text-align: center;
 		border: 1px solid $color-highlighted-text;
-		color: $color-highlighted-text;
 
 		@include transition-property(background-color, border-color);
-		@include transition-duration(0.15s);
-		@include animation-timing-function($ease-out-back);
+		@extend .animate-hover;
 
 		&:not(:last-child) {
 			@include rempix(margin-right, $metrics-subnav-button-size * 0.0625);
@@ -40,6 +38,12 @@ $metrics-subnav-button-size: $metrics-header-height * 0.63;
 			height: 100%;
 			top: 0;
 			left: 0;
+		}
+
+		.icon {
+			fill: $color-highlighted-text;
+			@include transition-property(fill);
+			@extend .animate-hover;
 		}
 	}
 }

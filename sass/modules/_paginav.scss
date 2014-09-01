@@ -1,6 +1,6 @@
 .paginav {
-	@include span-columns(9);
-	@include shift(1.5);
+	@include span-columns(10);
+	@include shift(1);
 	display: block;
 	clear: both;
 	margin-top: rhythm(1.5);
@@ -23,6 +23,9 @@
 	text-align: center;
 	vertical-align: middle;
 	line-height: rhythm(2);
+
+	@include transition-property(border-color background-color);
+	@extend .animate-hover;
 
 	a {
 		position: absolute;
@@ -47,4 +50,12 @@
 
 .paginav_button-prev {
 	@include shift(1);
+}
+
+// States
+html:not(.touch) {
+	.paginav_button:not(:nth-child(2)):hover {
+		border-color: $color-go-green;
+		background-color: $color-go-green;
+	}
 }

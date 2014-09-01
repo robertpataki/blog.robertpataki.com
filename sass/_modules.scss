@@ -1,3 +1,8 @@
+.animate-hover {
+	@include transition-duration(0.15s);
+	@include animation-timing-function($ease-out-back);
+}
+
 .banner {
 	color: $color-highlighted-text;
 	line-height: inherit;
@@ -13,12 +18,7 @@
 	height: 80%;
 	top: 10%;
 	left: 10%;
-
-	fill: $color-highlighted-text;
-
-	@include transition-property(fill);
-	@include transition-duration(0.15s);
-	@include animation-timing-function($ease-out-back);
+	fill: black;
 }
 
 .post-title {
@@ -52,14 +52,9 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-	
-		border-color: $color-go-green;
-		border-style: solid;
-		border-width: 0;
 
-		@include transition-property(border-width);
-		@include transition-duration(0.21s);
-		@include animation-timing-function($ease-out-back);
+		@include transition-property(box-shadow);
+		@extend .animate-hover;
 	}
 
 	.post-title {
@@ -135,7 +130,7 @@ html:not(.touch) {
 	.post-container {
 		&:hover {
 			.big-link {
-				border-bottom-width: 15px;
+				box-shadow: 0 -12px 0 $color-go-green inset;
 			}
 		}
 	}
