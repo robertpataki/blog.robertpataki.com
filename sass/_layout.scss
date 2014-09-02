@@ -31,4 +31,8 @@
 	@include span-columns(12);
 	@include rempix(padding, 0 $metrics-site-side-margin $metrics-site-side-margin * 4 $metrics-site-side-margin);
 	margin: 0 auto;
+
+	@include media($breakpoint-1-mobile-portrait) {
+        padding-bottom: rhythm(1.5);
+    }
 }

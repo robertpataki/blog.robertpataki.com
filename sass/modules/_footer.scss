@@ -24,25 +24,20 @@
 
 
 //States
-@include media($breakpoint-3-tablet-portrait) {
-	.footer_contents {
-		@include rempix(padding-top, $metrics-footer-height * 0.35);
-		@include rempix(width, 440px);
-	}
-}
-@include media($breakpoint-1-mobile-portrait) {
+@include media($breakpoint-2-mobile-landscape) {
 	.footer_wrapper {
 		@include span-columns(8);
 		@include shift(0);
 	}
 	.footer_contents {
-		@include rempix(width, 360px);
+		@include rempix(padding-top, $metrics-footer-height * 0.35);
+		@include rempix(width, 300px);
 	}	
 }
 @include media($breakpoint-1-mobile-portrait) {
     .footer_wrapper {
-    	@include span-columns(3);
-		@include shift(0.5);
+    	@include span-columns(4);
+		@include shift(0);
     }
     .footer_contents {
     	@include rempix(padding-top, $metrics-footer-height * 0.25);

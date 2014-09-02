@@ -43,8 +43,19 @@
 .post-container {
 	background: $color-header-background;
 
+	margin-bottom: rhythm(1);
+
 	&:not(:last-child) {
-		@include rempix(margin-bottom, 15px);
+		
+
+		// @include media($breakpoint-2-mobile-landscape) {
+  //       	@include span-columns(8);
+	 //        @include shift(0);
+	 //    }
+		// @include media($breakpoint-1-mobile-portrait) {
+	 //        @include span-columns(4);
+	 //        @include shift(0);
+	 //    }
 	}
 
 	.big-link {
@@ -58,11 +69,20 @@
 
 		@include transition-property(box-shadow);
 		@extend .animate-hover;
-	}
 
-	.row {
-		@include transition-property(margin);
-		@extend .animate-hover;
+		@include media($breakpoint-1-mobile-portrait) {
+		    @include rempix(padding, 18px 18px);
+		}
+
+		.post-intro {
+			margin: 0;
+			@include transition-property(margin-bottom);
+			@extend .animate-hover;
+		}
+
+		.post-title {
+			margin-bottom: rhythm(0.5);
+		}
 	}
 }
 
@@ -73,14 +93,14 @@
 
 	@include adjust-font-size-to($h1-2-fz);
 
-	@include media($breakpoint-3-tablet-portrait) {
-	    @include adjust-font-size-to($h1-2-fz * 0.8);
-	}
 	@include media($breakpoint-2-mobile-landscape) {
-	    @include adjust-font-size-to($h1-2-fz * 0.64);
+	    font-size: rhythm(1);
+	    line-height: rhythm(1.2);
 	}
 	@include media($breakpoint-1-mobile-portrait) {
-	    @include adjust-font-size-to($h1-2-fz * 0.512);
+	    font-size: rhythm(0.8);
+	    line-height: rhythm(1);
+	    @include rempix(max-width, 240px);
 	}
 
 	@include transition-property(margin);
@@ -140,12 +160,12 @@ html:not(.touch) {
 	.post-container {
 		&:hover {
 			.big-link {
-				box-shadow: 0 -12px 0 $color-go-green inset;
+				box-shadow: 0 -12px 0 $color-highlighted-text inset;
 			}
 			.post-title {
 				margin-top: -4px;
 			}
-			.row:nth-child(2n + 1) {
+			.post-intro {
 				margin-bottom: 4px;
 			}
 		}

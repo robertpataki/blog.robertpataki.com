@@ -3,16 +3,18 @@
 	@include shift(1);
 	display: block;
 	clear: both;
-	margin-top: rhythm(1.5);
+	margin-top: rhythm(0.25);
 	@include clearfix;
 
     @include media($breakpoint-2-mobile-landscape) {
         @include span-columns(8);
 		@include shift(0);
+		margin-top: rhythm(1);
     }
 	@include media($breakpoint-1-mobile-portrait) {
         @include span-columns(4);
 		@include shift(0);
+		margin-top: rhythm(0);
     }
 }
 
@@ -33,6 +35,10 @@
 	text-transform: uppercase;
 	text-align: center;
 	vertical-align: middle;
+
+	&.is-disabled {
+    	opacity: 0.6;
+    }
 
 	@include transition-property(border-color background-color);
 	@extend .animate-hover;

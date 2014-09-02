@@ -16,6 +16,9 @@ $(document).ready(function(){
 		} else {
 			$main.height('auto');
 		}
+
+		var heroRatio = $hero.width() / $hero.height();
+		console.log($hero.width() > $hero.height());
 		
 		$heroImage.css({
 			'width': '110%',

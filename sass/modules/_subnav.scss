@@ -7,6 +7,11 @@ $metrics-subnav-button-size: $metrics-header-height * 0.63;
 	@include rempix(height, $metrics-header-height);
 	vertical-align: middle;
 
+	@include media($breakpoint-2-mobile-landscape) {
+		visibility: hidden;
+		display: none;
+	}
+
 	.subnav_buttons {
 		@extend .list-nostyle;
 		@extend .list-inline;

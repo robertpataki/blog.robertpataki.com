@@ -6,8 +6,13 @@ body, html {
 body {
 	@extend .font-body;
 	color: $color-body-text;
-	background-image: inline-image("vinyl-3.jpg");
+	@extend .minty-background;
+}
+
+.minty-background {
+	background-image: inline-image("mint.png");
 	background-size: cover;
+	background-position: 50% 50%;
 	background-attachment: fixed;
 }
 
@@ -33,6 +38,16 @@ h2, h3, h4 {
 
 p, ol, ul {
 	font-weight: 400;
+
+	@include media($breakpoint-3-tablet-portrait) {
+	    @include adjust-font-size-to(em(21));
+	}
+	@include media($breakpoint-2-mobile-landscape) {
+	    @include adjust-font-size-to(em(19));
+	}
+	@include media($breakpoint-1-mobile-portrait) {
+	    @include adjust-font-size-to(em(17));
+	}
 }
 
 a {

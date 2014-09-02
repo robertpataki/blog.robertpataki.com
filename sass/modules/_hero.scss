@@ -1,7 +1,8 @@
 .hero {
 	@include rempix(height, 630px);
-	background-color: $color-go-green;
+	@extend .minty-background;
 	overflow: hidden;
+	
 	@include rempix(padding-top, $metrics-header-height);
 
 	@include media($breakpoint-3-tablet-portrait) {
@@ -12,7 +13,7 @@
 	    @include rempix(height, 270px);
 	}
 	@include media($breakpoint-1-mobile-portrait) {
-	    @include rempix(height, 210px);
+	    @include rempix(height, 310px);
 	}
 }
 
