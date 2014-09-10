@@ -16,29 +16,10 @@ $(document).ready(function(){
 		} else {
 			$main.height('auto');
 		}
-
-		var heroRatio = $hero.width() / $hero.height();
-		console.log($hero.width() > $hero.height());
-		
-		$heroImage.css({
-			'width': '110%',
-			'height': 'auto',
-			'margin-left': '-5%'
-		});
-		$heroImage.css({
-			'margin-top': -1 * Math.round(($heroImage.height() - $hero.height()) / 2)
-		});
 	}
 
 	var _onScroll = function () {
-        window.scrollPosition = $window.scrollTop();    
-		
-		if(!$('html').hasClass('touch')) {
-			var offsetY = Math.round(0.3 * window.scrollPosition);
-			$heroImage.css({
-				'top': offsetY + 'px'
-			});
-		}
+        window.scrollPosition = $window.scrollTop();
     }
 
 	$window.on('resize', _onResize);

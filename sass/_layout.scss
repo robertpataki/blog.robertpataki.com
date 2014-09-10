@@ -14,17 +14,20 @@
     }
 }
 
+.l-main {
+	@include rempix(padding-top, $metrics-header-height);
+
+	@include media($breakpoint-3-tablet-portrait) {
+		padding-top: 0;
+    }
+}
+
 .l-container {
 	@include outer-container;
 }
 
 .l-section {
 	@extend .l-container;
-	@include rempix(padding-top, $metrics-header-height);
-
-	@include media($breakpoint-3-tablet-portrait) {
-        padding-top: 0;
-    }
 }
 
 .l-contents {
