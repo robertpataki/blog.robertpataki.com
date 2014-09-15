@@ -10,10 +10,11 @@ body {
 }
 
 .minty-background {
-	background-image: inline-image("mint-blur.jpg");
-	background-size: cover;
-	background-position: 50% 50%;
-	background-attachment: fixed;
+	// background-image: inline-image("mint-blur.jpg");
+	background-color: $color-body-text;
+	// background-size: cover;
+	// background-position: 50% 50%;
+	// background-attachment: fixed;
 }
 
 * {
@@ -40,14 +41,35 @@ p, ol, ul {
 	font-weight: 400;
 
 	@include media($breakpoint-3-tablet-portrait) {
-	    @include adjust-font-size-to(em(21));
+	    // @include adjust-font-size-to(em(21));
 	}
 	@include media($breakpoint-2-mobile-landscape) {
-	    @include adjust-font-size-to(em(19));
+	    // @include adjust-font-size-to(em(19));
 	}
 	@include media($breakpoint-1-mobile-portrait) {
-	    @include adjust-font-size-to(em(17));
+	    // @include adjust-font-size-to(em(17));
+	    @include rempix(font-size, 19px);
+	    @include rempix(line-height, 29px);
 	}
+}
+
+@include media($breakpoint-3-tablet-portrait) {
+    h2 {
+    	@include rempix(font-size, 25px);
+    	@include rempix(line-height, 35px);
+    }
+}
+@include media($breakpoint-2-mobile-landscape) {
+    h2 {
+    	@include rempix(font-size, 23px);
+    	@include rempix(line-height, 33px);
+    }
+}
+@include media($breakpoint-1-mobile-portrait) {
+ 	h2 {
+    	@include rempix(font-size, 21px);
+    	@include rempix(line-height, 31px);
+    }
 }
 
 a {

@@ -45,19 +45,6 @@
 
 	margin-bottom: rhythm(1);
 
-	&:not(:last-child) {
-		
-
-		// @include media($breakpoint-2-mobile-landscape) {
-  //       	@include span-columns(8);
-	 //        @include shift(0);
-	 //    }
-		// @include media($breakpoint-1-mobile-portrait) {
-	 //        @include span-columns(4);
-	 //        @include shift(0);
-	 //    }
-	}
-
 	.big-link {
 		@include rempix(padding, 24px 42px);
 		position: relative;
@@ -113,6 +100,10 @@
 
 	* {
 		@include user-select(auto);
+	}
+
+	p, ol, ul {
+		margin: rhythm(0.5) auto rhythm(1) auto;
 	}
 }
 
