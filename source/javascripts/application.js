@@ -5,9 +5,8 @@ $(document).ready(function(){
 	var $footer = $('.footer');
 	var $main = $('.l-main');
 	var $window = $(window);
-	var $hero = $('.hero');
-	var $heroImage = $hero.find('img');
-	var $subnav = $('.subnav');
+	var $heroImage = $('.hero img');
+	var $title = $('.entry-title');
 	
 	var _onResize = function() {
 		// Fit the main content area to fill the height of the window if there isn't enough content
@@ -16,18 +15,16 @@ $(document).ready(function(){
 		} else {
 			$main.height('auto');
 		}
-	}
 
-	var _onScroll = function () {
-        window.scrollPosition = $window.scrollTop();
-    }
+		$title.css({
+			'top': -1 * $title.height() * 1.5
+		});
+	}
 
 	$window.on('resize', _onResize);
-	$window.resize();
-
-	if(typeof $hero !== 'undefined') {
-		$window.on('scroll', _onScroll);
-	}
+	setTimeout(function(){
+		$window.resize();
+	}, 100);
 
 	var _init = function() {
 		// Distinguish touch devices
