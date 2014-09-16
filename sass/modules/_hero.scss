@@ -45,7 +45,7 @@
 		display: inline-block;
 		text-transform: capitalize;
 		color: white;
-		// text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 		
 		@include rempix(font-size, 55px);
 		@include rempix(line-height, 65px);
@@ -53,15 +53,16 @@
 
 	@include media($breakpoint-3-tablet-portrait) {
 	    .post-title {
-	    	padding: rhythm(0.5 * 0.8) rhythm(0.8);
+	    	padding: rhythm(0.2) rhythm(0.6);
+	    	margin: rhythm(0.3);
 	    	@include rempix(font-size, 42px);
 			@include rempix(line-height, 52px);
 	    }
 	}
 	@include media($breakpoint-2-mobile-landscape) {
 	    .post-title {
-	    	padding: rhythm(0.5 * 0.64) rhythm(0.64);
-	    	margin: rhythm(0.24);
+	    	padding: rhythm(0.1) rhythm(0.4);
+	    	margin: rhythm(0.2);
 	    	@include rempix(font-size, 32px);
 			@include rempix(line-height, 42px);
 	    }
@@ -71,7 +72,7 @@
 	    	padding: 0;
 	    	margin: rhythm(0.125);
 	    	@include rempix(font-size, 24px);
-			@include rempix(line-height, 34px);
+			@include rempix(line-height, 28px);
 	    }
 	}
 }

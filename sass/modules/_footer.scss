@@ -24,6 +24,16 @@
 
 
 //States
+@include media($breakpoint-3-tablet-portrait) {
+	.footer_wrapper {
+		@include span-columns(12);
+		@include shift(0);
+	}
+	.footer_contents {
+		@include rempix(padding-top, $metrics-footer-height * 0.35);
+		@include rempix(width, 420px);
+	}	
+}
 @include media($breakpoint-2-mobile-landscape) {
 	.footer_wrapper {
 		@include span-columns(8);

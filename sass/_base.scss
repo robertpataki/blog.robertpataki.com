@@ -39,17 +39,16 @@ h2, h3, h4 {
 
 p, ol, ul {
 	font-weight: 400;
-
-	@include media($breakpoint-3-tablet-portrait) {
-	    // @include adjust-font-size-to(em(21));
-	}
-	@include media($breakpoint-2-mobile-landscape) {
-	    // @include adjust-font-size-to(em(19));
-	}
+	
 	@include media($breakpoint-1-mobile-portrait) {
-	    // @include adjust-font-size-to(em(17));
 	    @include rempix(font-size, 19px);
 	    @include rempix(line-height, 29px);
+	}
+}
+
+ol, ul {
+	li {
+		@include rempix(margin-bottom, 9px);
 	}
 }
 
