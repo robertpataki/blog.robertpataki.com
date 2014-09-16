@@ -6,7 +6,8 @@
         [
           ".pygments-cache",
           ".sass-cache",
-          ".themes/classic"
+          ".themes/classic",
+          "public"
         ],
         "path": "./"
       }
