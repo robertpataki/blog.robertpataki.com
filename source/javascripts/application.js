@@ -14,17 +14,22 @@ $(document).ready(function(){
 	
 	var _onResize = function() {
 		// Fit the main content area to fill the height of the window if there isn't enough content
-		if($main.height() < window.innerHeight - $footer.height()) {
-			$main.height(window.innerHeight - $footer.height());
+		setTimeout(function(){
+			var headerHeight = $header.height();
+		var footerHeight = $footer.height();
+		var fixedHeight = window.innerHeight - footerHeight - headerHeight;
+		if($main.height() <= fixedHeight) {
+			$main.height(fixedHeight);
 		} else {
 			$main.height('auto');
 		}
+		}, 10);
 
 		$title.css({
 			'top': -1 * $title.height() * 1.5
 		});
 
-		if(window.innerWidth < 480) {
+		if(window.innerWidth < 960) {
 			$html.addClass('is-mobile');
 		} else {
 			$html.removeClass('is-mobile');
@@ -38,6 +43,7 @@ $(document).ready(function(){
 	setTimeout(function(){
 		$window.resize();
 	}, 100);
+	$window.resize();
 
 	var toggleMenu = function(e) {
 		if($header.hasClass('is-open')) {
