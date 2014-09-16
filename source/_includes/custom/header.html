@@ -1,6 +1,17 @@
 <header class="l-header header-contents">
-		<h1 id="title" class="banner"><a id="title-link" href="{{ root_url }}/">{{ site.title }}</a></h1>
-		{% if page.title %}
+	{% if page.title %}
 		{% include sub_navigation.html %}
-		{% endif %}
+	{% endif %}
+	<h1 id="title" class="banner"><a id="title-link" href="{{ root_url }}/">{{ site.title }}</a></h1>
+	{% if page.title %}
+		<div class="subnav_button subnav_button-toggle">
+			<svg viewBox="0 0 120 120" class="subnav_icon">
+				<g id="Burger">
+					<rect x="23" y="33" width="74" height="7"/>
+					<rect x="23" y="56" width="74" height="7"/>
+					<rect x="23" y="79" width="74" height="7"/>
+				</g>
+			</svg>
+		</div>
+	{% endif %}
 </header>

@@ -9,14 +9,6 @@ body {
 	@extend .minty-background;
 }
 
-.minty-background {
-	// background-image: inline-image("mint-blur.jpg");
-	background-color: $color-body-text;
-	// background-size: cover;
-	// background-position: 50% 50%;
-	// background-attachment: fixed;
-}
-
 * {
     @include box-sizing(border-box);
     position: relative;

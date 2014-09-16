@@ -1,4 +1,4 @@
-$metrics-subnav-button-size: $metrics-header-height * 0.63;
+$metrics-subnav-button-size: $metrics-header-height * 0.6;
 
 .subnav {
 	float: right;
@@ -6,60 +6,131 @@ $metrics-subnav-button-size: $metrics-header-height * 0.63;
 	@include rempix(line-height, $metrics-header-height);
 	@include rempix(height, $metrics-header-height);
 	vertical-align: middle;
+}
 
-	@include media($breakpoint-2-mobile-landscape) {
-		visibility: hidden;
-		display: none;
+.subnav_buttons {
+	@extend .list-nostyle;
+	@extend .list-inline;
+	@include rempix(line-height, $metrics-subnav-button-size);
+	@include rempix(height, $metrics-subnav-button-size);
+
+	/* Use negative value to eliminate the push down caused by the border */
+	@include rempix(top, -1px);
+}
+
+.subnav_button {
+	@include rempix(width, $metrics-subnav-button-size);
+	@include rempix(height, $metrics-subnav-button-size);
+	@include rempix(line-height, $metrics-subnav-button-size);
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid $color-highlighted-text;
+	@include rempix(margin-bottom, 1px);
+
+	@include transition-property(background-color, border-color);
+	@extend .animate-hover;
+
+	&:not(:last-child) {
+		@include rempix(margin-right, $metrics-subnav-button-size * 0.0625);
 	}
 
-	.subnav_buttons {
-		@extend .list-nostyle;
-		@extend .list-inline;
-		@include rempix(line-height, $metrics-subnav-button-size);
-		@include rempix(height, $metrics-subnav-button-size);
-
-		/* Use negative value to eliminate the push down caused by the border */
-		@include rempix(top, -1px);
+	a {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
 	}
+}
 
-	.subnav_button {
-		@include rempix(width, $metrics-subnav-button-size);
-		@include rempix(height, $metrics-subnav-button-size);
-		@include rempix(line-height, $metrics-subnav-button-size);
-		vertical-align: middle;
-		text-align: center;
-		border: 1px solid $color-highlighted-text;
+.subnav_icon {
+	@extend .icon;
+	fill: $color-highlighted-text;
+	@include transition-property(fill);
+	@extend .animate-hover;
+}
 
-		@include transition-property(background-color, border-color);
-		@extend .animate-hover;
+.subnav_button-toggle {
+	float: right;
+	visibility: hidden;
+	display: none;
+	cursor: pointer;
+	@include rempix(top, 13px);
+}
 
-		&:not(:last-child) {
-			@include rempix(margin-right, $metrics-subnav-button-size * 0.0625);
-		}
+.content_blocker {
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	pointer-events: none;
+	opacity: 0;
 
-		a {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-		}
+	@include transition-property(opacity);
+	@include transition-duration(0.5s);
 
-		.icon {
-			fill: $color-highlighted-text;
-			@include transition-property(fill);
-			@extend .animate-hover;
-		}
+	&.is-visible {
+		pointer-events: auto;
+		opacity: 1;
 	}
 }
 
 // States
+.is-mobile {
+
+	.subnav_button-toggle {
+		visibility: visible;
+		display: inline-block;
+	}
+
+	.l-header {
+		@include transform(translateY(0));
+		@include transition-property(transform);
+		@include transition-duration(0.2s);
+		@include animation-timing-function($ease-out-expo);
+
+		&.is-open {
+			@include transform(translateY($metrics-header-height * 3));
+		}
+	}
+
+	.subnav {
+		float: none;
+		display: block;
+		width: 100%;
+		height: auto;
+		position: absolute;
+		left: 0;
+		top: - $metrics-header-height * 3;
+		background: $color-header-background;
+	}
+
+	.subnav_buttons {
+		display: block;
+		height: auto;
+	}
+
+	.subnav_button:not(.subnav_button-toggle) {
+		float: none;
+		display: block;
+		width: 100%;
+		border: none;
+		margin-bottom: 0;
+		border-bottom: 1px solid $color-highlighted-text;
+
+		@include rempix(height, $metrics-header-height);
+	}
+}
+
 html:not(.touch) {
 	.subnav_button:hover {
 		border-color: $color-highlighted-text;
 		background-color: $color-highlighted-text;
 
-		.icon {
+		.subnav_icon {
 			fill: $color-body-text-invert;
 		}
 	}

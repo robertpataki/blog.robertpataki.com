@@ -3,10 +3,14 @@ $(document).ready(function(){
 	FastClick.attach(document.body);
 
 	var $footer = $('.footer');
+	var $header = $('.l-header');
+	var $blocker = $('.content_blocker');
+	var $html = $('html');
 	var $main = $('.l-main');
 	var $window = $(window);
 	var $heroImage = $('.hero img');
 	var $title = $('.entry-title');
+	var $menuToggle = $('.subnav_button-toggle');
 	
 	var _onResize = function() {
 		// Fit the main content area to fill the height of the window if there isn't enough content
@@ -19,12 +23,35 @@ $(document).ready(function(){
 		$title.css({
 			'top': -1 * $title.height() * 1.5
 		});
+
+		if(window.innerWidth < 480) {
+			$html.addClass('is-mobile');
+		} else {
+			$html.removeClass('is-mobile');
+			$html.removeClass('is-scrolling-blocked');
+			$header.removeClass('is-open');
+			$blocker.removeClass('is-visible');
+		}
 	}
 
 	$window.on('resize', _onResize);
 	setTimeout(function(){
 		$window.resize();
 	}, 100);
+
+	var toggleMenu = function(e) {
+		if($header.hasClass('is-open')) {
+			$header.removeClass('is-open');
+			$blocker.removeClass('is-visible');
+			$blocker.off('click', toggleMenu);
+			$html.removeClass('is-scrolling-blocked');
+		} else {
+			$header.addClass('is-open');
+			$blocker.addClass('is-visible');
+			$blocker.on('click', toggleMenu);
+			$html.addClass('is-scrolling-blocked');
+		}
+	}
 
 	var _init = function() {
 		// Distinguish touch devices
@@ -42,6 +69,8 @@ $(document).ready(function(){
 				$(this).load();
 			};
 		});
+
+		$menuToggle.on('click', toggleMenu);
 	}
 	_init();
 });

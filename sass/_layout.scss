@@ -1,6 +1,6 @@
 .l-header {
 	width: 100%;
-	@include rempix(height, $metrics-header-height);
+	// @include rempix(height, $metrics-header-height);
 	@include rempix(line-height, $metrics-header-height);
 	@include rempix(padding, 0 $metrics-site-side-margin);
 	z-index: 1000;
@@ -8,6 +8,7 @@
 	background: $color-header-background;
 	border-bottom: 2px solid $color-site-background;
 	position: fixed;
+	z-index: 10001;
 
 	@include media($breakpoint-3-tablet-portrait) {
         position: relative;

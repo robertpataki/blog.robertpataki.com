@@ -1,3 +1,7 @@
+.minty-background {
+	background-color: $color-body-text;
+}
+
 .animate-hover {
 	@include transition-duration(0.15s);
 	@include animation-timing-function($ease-out-back);

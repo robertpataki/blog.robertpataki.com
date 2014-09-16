@@ -40,7 +40,7 @@
 		@include shift(0);
 	}
 	.footer_contents {
-		@include rempix(padding-top, $metrics-footer-height * 0.35);
+		@include rempix(padding-top, $metrics-footer-height * 0.3);
 		@include rempix(width, 300px);
 	}	
 }
@@ -50,7 +50,7 @@
 		@include shift(0);
     }
     .footer_contents {
-    	@include rempix(padding-top, $metrics-footer-height * 0.25);
+    	@include rempix(padding-top, $metrics-footer-height * 0.3);
     	@include rempix(max-width, 240px);
     }
 }

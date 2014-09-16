@@ -2,6 +2,9 @@
 {% include head.html %}
 <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.index_view %} class="is-index-view" {% endif %}>
   	{% include header.html %}
+  	
+  	<div class="content_blocker"></div>
+	
 	<section id="main-container" class="l-main">
 		{{ content | expand_urls: root_url }}
 	</section>
