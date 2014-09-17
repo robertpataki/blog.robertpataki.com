@@ -117,6 +117,11 @@
 	p, ol, ul {
 		margin: rhythm(0.5) auto rhythm(1) auto;
 	}
+
+	@include media($breakpoint-1-mobile-portrait) {
+	    @include span-columns(4);
+		@include shift(0);
+	}
 }
 
 .link {

@@ -19,16 +19,22 @@ $(document).ready(function(){
 		var footerHeight = $footer.height();
 		var fixedHeight = window.innerHeight - footerHeight - headerHeight;
 		if($main.height() <= fixedHeight) {
+			$footer.css({
+				'position': 'fixed',
+				'bottom': '0'
+			});
 			$main.height(fixedHeight);
 		} else {
+			$footer.css({
+				'position': 'relative',
+				'bottom': 'auto'
+			});
 			$main.height('auto');
 		}
 		}, 10);
 
-		$title.css({
-			'top': -1 * $title.height() * 1.5
-		});
-
+		_resizePostTitle();
+		
 		if(window.innerWidth < 960) {
 			$html.addClass('is-mobile');
 		} else {
@@ -37,6 +43,18 @@ $(document).ready(function(){
 			$header.removeClass('is-open');
 			$blocker.removeClass('is-visible');
 		}
+	}
+
+	var _resizePostTitle = function() {
+		var titlePositionY = $title.height() * -1.5;
+
+		if(window.innerWidth <= 480) {
+			// titlePositionY = -1 * Math.round($heroImage.height() * 0.5 + $title.height() * 0.5);
+		}
+
+		$title.css({
+			'top': titlePositionY
+		});
 	}
 
 	$window.on('resize', _onResize);

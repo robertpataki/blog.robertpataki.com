@@ -24,7 +24,7 @@ $metrics-subnav-button-size: $metrics-header-height * 0.6;
 	@include rempix(line-height, $metrics-subnav-button-size);
 	vertical-align: middle;
 	text-align: center;
-	border: 1px solid $color-highlighted-text;
+	// border: 1px solid $color-highlighted-text;
 	@include rempix(margin-bottom, 1px);
 
 	@include transition-property(background-color, border-color);

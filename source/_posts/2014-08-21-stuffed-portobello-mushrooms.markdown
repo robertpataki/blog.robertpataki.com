@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Stuffed portobello mushrooms"
-intro: "Vegan recipe using shrooms"
+title: "Let's cook stuffed portobello mushrooms"
+intro: "Hacking some vegan stuffing with mushrooms"
 hero: "/images/posts/stuffed-portobello-mushrooms-hero.jpg"
-gallery: [stuffed-portobello-mushrooms]
 date: 2014-08-27 10:18:40 +0100
 comments: true
 categories: vegan recipe
@@ -47,12 +46,12 @@ categories: vegan recipe
 
 You can serve the meal with some fresh slices of cucumbers, parsley and tomatoes.
 
-{% img post-photo /images/posts/stuffed-portobello-mushrooms-2-preview.jpg [title text [alt text]] %}
+{% img post-photo /images/posts/stuffed-portobello-mushrooms-2-preview.jpg Serving the stuffed mushrooms on a plate with brown rice and tomatoes %}
 
 ## Use up the leftover sauce as spread
 
 If there is any leftover sauce, put it in the fridge and you can have it on some fresh toast the next morning :)
 
-{% img post-photo /images/posts/stuffed-portobello-mushrooms-1-preview.jpg [title text [alt text]] %}
+{% img post-photo /images/posts/stuffed-portobello-mushrooms-1-preview.jpg Serving the leftover stfuffing as spread on some sourdough bread with green peppers and red chilli %}
 
 Enjoy!

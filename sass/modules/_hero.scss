@@ -69,12 +69,19 @@
 	    }
 	}
 	@include media($breakpoint-1-mobile-portrait) {
+		.entry-title {
+			@include span-columns(4);
+			@include shift(0);
+		}
 	    .post-title {
 	    	padding: 0;
-	    	margin: rhythm(0.125);
+	    	margin: rhythm(0.25);
 	    	@include rempix(font-size, 24px);
 			@include rempix(line-height, 28px);
 	    }
+	    .post-intro {
+			margin-top: rhythm(1.5);
+		}
 	}
 }
 
