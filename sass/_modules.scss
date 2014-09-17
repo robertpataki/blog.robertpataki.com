@@ -91,6 +91,7 @@
 	text-transform: capitalize;
 
 	@include adjust-font-size-to($h1-2-fz);
+	line-height: rhythm(1.2);
 
 	@include media($breakpoint-2-mobile-landscape) {
 	    font-size: rhythm(1);
