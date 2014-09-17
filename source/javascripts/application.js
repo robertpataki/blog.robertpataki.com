@@ -11,11 +11,26 @@ $(document).ready(function(){
 	var $heroImage = $('.hero img');
 	var $title = $('.entry-title');
 	var $menuToggle = $('.subnav_button-toggle');
+	var $subnav = $('.subnav');
 	
-	var _onResize = function() {
+	var _onResize = function() {		
+		if(window.innerWidth < 960) {
+			$html.addClass('is-mobile');
+		} else {
+			$html.removeClass('is-mobile');
+			if($header.hasClass('is-open')) {
+				_toggleMenu(null, true);
+			}
+		}
+
+		_resizeMainContainer();
+		_resizePostTitle();
+		_setSubnavPosition();
+	}
+
+	var _resizeMainContainer = function() {
 		// Fit the main content area to fill the height of the window if there isn't enough content
-		setTimeout(function(){
-			var headerHeight = $header.height();
+		var headerHeight = $header.height();
 		var footerHeight = $footer.height();
 		var fixedHeight = window.innerHeight - footerHeight - headerHeight;
 		if($main.height() <= fixedHeight) {
@@ -23,25 +38,15 @@ $(document).ready(function(){
 				'position': 'fixed',
 				'bottom': '0'
 			});
-			$main.height(fixedHeight);
+			$html.height('100%');
+			$body.height('100%');
+			// $main.height(fixedHeight);
 		} else {
 			$footer.css({
 				'position': 'relative',
 				'bottom': 'auto'
 			});
 			$main.height('auto');
-		}
-		}, 10);
-
-		_resizePostTitle();
-		
-		if(window.innerWidth < 960) {
-			$html.addClass('is-mobile');
-		} else {
-			$html.removeClass('is-mobile');
-			$html.removeClass('is-scrolling-blocked');
-			$header.removeClass('is-open');
-			$blocker.removeClass('is-visible');
 		}
 	}
 
@@ -53,13 +58,9 @@ $(document).ready(function(){
 	}
 
 	$window.on('resize', _onResize);
-	setTimeout(function(){
-		$window.resize();
-	}, 100);
-	$window.resize();
 
 	var _onScroll = function() {
-		if(!$html.hasClass('is-mobile')) {
+		if(!$html.hasClass('touch') && !$html.hasClass('is-mobile') && $heroImage.length) {
 			if($window.scrollTop() > $heroImage.height()) {
 				$header.addClass('is-translucent');
 			} else {
@@ -72,17 +73,48 @@ $(document).ready(function(){
 
 	$window.on('scroll', _onScroll);
 
-	var toggleMenu = function(e) {
+	var _toggleMenu = function(e, quickMode) {
 		if($header.hasClass('is-open')) {
 			$header.removeClass('is-open');
 			$blocker.removeClass('is-visible');
-			$blocker.off('click', toggleMenu);
+			$blocker.off('click', _toggleMenu);
 			$html.removeClass('is-scrolling-blocked');
+
+			if(!quickMode) {
+				TweenMax.to($header, 0.42, {transform: 'translateY(0)', ease: Expo.easeInOut});
+				TweenMax.to($blocker, 0.6, {opacity: 0, ease: Expo.easeInOut, delay: 0.1, onComplete: function(){
+					$blocker.css({
+						'display': 'none'
+					})
+				}});
+			} else {
+				TweenMax.set($header, {transform: 'translateY(0)'});
+				TweenMax.set($blocker, {opacity: 0, display: 'none'});
+			}
 		} else {
 			$header.addClass('is-open');
 			$blocker.addClass('is-visible');
-			$blocker.on('click', toggleMenu);
+			$blocker.on('click', _toggleMenu);
 			$html.addClass('is-scrolling-blocked');
+
+			TweenMax.to($header, 0.42, {transform: 'translateY(' +  $header.height() + 'px)', ease: Expo.easeInOut});
+			TweenMax.to($blocker, 0.3, {opacity: 1, ease: Expo.easeInOut, onStart: function(){
+				$blocker.css({
+					'display': 'block'
+				})
+			}});
+		}
+	}
+
+	var _setSubnavPosition = function () {
+		if($html.hasClass('is-mobile')) {
+			$subnav.css({
+				'top': -1 * $subnav.height()
+			})
+		} else {
+			$subnav.css({
+				'top': 0
+			})
 		}
 	}
 
@@ -103,7 +135,9 @@ $(document).ready(function(){
 			};
 		});
 
-		$menuToggle.on('click', toggleMenu);
+		$window.resize();
+
+		$menuToggle.on('click', _toggleMenu);
 	}
 	_init();
 });

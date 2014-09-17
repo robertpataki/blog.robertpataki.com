@@ -1,4 +1,4 @@
-$metrics-subnav-button-size: $metrics-header-height * 0.6;
+$metrics-subnav-button-size: $metrics-header-height * 0.75;
 
 .subnav {
 	float: right;
@@ -55,7 +55,7 @@ $metrics-subnav-button-size: $metrics-header-height * 0.6;
 	visibility: hidden;
 	display: none;
 	cursor: pointer;
-	@include rempix(top, 13px);
+	@include rempix(top, 9px);
 }
 
 .content_blocker {
@@ -66,16 +66,8 @@ $metrics-subnav-button-size: $metrics-header-height * 0.6;
 	width: 100%;
 	height: 100%;
 	z-index: 10000;
-	pointer-events: none;
 	opacity: 0;
-
-	@include transition-property(opacity);
-	@include transition-duration(0.5s);
-
-	&.is-visible {
-		pointer-events: auto;
-		opacity: 1;
-	}
+	display: none;
 }
 
 // States
@@ -86,17 +78,6 @@ $metrics-subnav-button-size: $metrics-header-height * 0.6;
 		display: inline-block;
 	}
 
-	.l-header {
-		@include transform(translateY(0));
-		@include transition-property(transform);
-		@include transition-duration(0.2s);
-		@include animation-timing-function($ease-out-expo);
-
-		&.is-open {
-			@include transform(translateY($metrics-header-height * 3));
-		}
-	}
-
 	.subnav {
 		float: none;
 		display: block;
@@ -104,7 +85,6 @@ $metrics-subnav-button-size: $metrics-header-height * 0.6;
 		height: auto;
 		position: absolute;
 		left: 0;
-		top: - $metrics-header-height * 3;
 		background: $color-header-background;
 	}
 
@@ -122,6 +102,13 @@ $metrics-subnav-button-size: $metrics-header-height * 0.6;
 		border-bottom: 1px solid $color-highlighted-text;
 
 		@include rempix(height, $metrics-header-height);
+
+		.subnav_icon {
+			width: 70%;
+			height: 70%;
+			top: 15%;
+			left: 15%;
+		}
 	}
 }
 

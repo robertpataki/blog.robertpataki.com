@@ -1,11 +1,15 @@
 body, html {
 	margin: 0;
-	background: #EFEFEF;
+}
+
+html {
+    background: $color-body-text;
 }
 
 body {
 	@extend .font-body;
-	color: $color-body-text;
+	background: $color-site-background;
+    color: $color-body-text;
 	@extend .minty-background;
 }
 
