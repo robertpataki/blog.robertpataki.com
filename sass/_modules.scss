@@ -107,6 +107,13 @@
 	@extend .animate-hover;
 }
 
+.entry-comments {
+	@include span-columns(10);
+	@include shift(1);
+	border-top: 1px solid lighten($color-body-text, 30%);
+	margin: rhythm(2);
+}
+
 .entry-content {
 	@include span-columns(10);
 	@include shift(1);

@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://robertpataki.github.io/blog
+url: http://blog.robertpataki.com
 title: Hello. Yes, this is blog.
 # subtitle: 
 author: Rob Pataki
@@ -49,3 +49,7 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # Google Analytics
 google_analytics_tracking_id: UA-19326313-17
+
+# Disqus Comments
+disqus_short_name: helloyesthisisblog
+disqus_show_comment_count: false

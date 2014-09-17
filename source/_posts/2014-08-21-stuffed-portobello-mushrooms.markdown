@@ -8,7 +8,7 @@ comments: true
 categories: vegan recipe
 ---
 
-<p class="post-intro">The other day I stumbled accross a very nice <a class="link" href="http://blog.fatfreevegan.com/2008/08/roasted-eggplant-almond-dip.html" target="_blank">vegan recipe</a>. After trying the recipe for this delicious dip I wanted to see how I could alter it, so that it makes a stuffing for mushrooms. After I replaced the eggplants with courgettes, and I did some minor alterations I was very happy with the results, so I thought I'd share this tasty vegan recipe with others.</p>
+<p class="post-intro">The other day I was searching for some cooking inspiration, and I stumbled upon a very nice <a class="link" href="http://blog.fatfreevegan.com/2008/08/roasted-eggplant-almond-dip.html" target="_blank">vegan recipe</a>. After making that delicious dip myself I started thinking how I could turn it into a mushroom stuffing, so I started experimenting, and I replaced the aubergines with courgettes, and I did some minor alterations to the original recipe. I was quite happy with the result, so I thought I'd share this tasty vegan creation with others.</p>
 
 
 ## Ingredients (for 4)
@@ -48,10 +48,10 @@ You can serve the meal with some fresh slices of cucumbers, parsley and tomatoes
 
 {% img post-photo /images/posts/stuffed-portobello-mushrooms-2-preview.jpg Serving the stuffed mushrooms on a plate with brown rice and tomatoes %}
 
-## Use up the leftover sauce as spread
+## Using the leftover dip
 
-If there is any leftover sauce, put it in the fridge and you can have it on some fresh toast the next morning :)
+The leftover dip is perfect to be used as spread on some fresh bread! Put it on a slice of fresh sourdough bread with a pinch of salt and some chillies and enjoy it for breakfast the next morning :)
 
 {% img post-photo /images/posts/stuffed-portobello-mushrooms-1-preview.jpg Serving the leftover stfuffing as spread on some sourdough bread with green peppers and red chilli %}
 
-Enjoy!
+I hope you will enjoy this recipe, and once you tried it please let me know in the comments how it worked out for you - or if there is anything you'd change to make it better!
