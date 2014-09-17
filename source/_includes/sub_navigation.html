@@ -2,7 +2,7 @@
 	<ul class="subnav_buttons">
 		<li {% if page.previous.url %} class="subnav_button subnav_button-prev" {% else %} class="subnav_button subnav_button-prev is-disabled" {% endif %}>
 			{% if page.previous.url %}
-				<a href="{{ root_url }}/{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
+				<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
 					<svg viewBox="0 0 120 120" class="subnav_icon">
 						<g>
 							<polyline id="Right_Arrow" points="40.2,60.1 77,96.8 79.8,93.9 45.9,60 79.8,26.1 77,23.2"/>
@@ -21,7 +21,7 @@
 		</li>
 		<li {% if page.next.url %} class="subnav_button subnav_button-next" {% else %} class="subnav_button subnav_button-next is-disabled" {% endif %}>
 			{% if page.next.url %}
-				<a href="{{ root_url }}/{{page.next.url}}" title="Previous Post: {{page.next.title}}">
+				<a href="{{page.next.url}}" title="Previous Post: {{page.next.title}}">
 					<svg viewBox="0 0 120 120" class="subnav_icon">
 						<g>
 							<polyline points="79.8,59.9 43,23.2 40.2,26.1 74.1,60 40.2,93.9 43,96.8"/>
