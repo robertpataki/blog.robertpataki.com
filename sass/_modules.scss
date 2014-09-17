@@ -15,6 +15,14 @@
 	@include rempix(top, 2px);
 }
 
+.header_placeholder {
+	position: relative;
+	@include rempix(height, $metrics-header-height);
+	@include media($breakpoint-3-tablet-portrait) {
+		display: none;
+    }
+}
+
 .icon {
 	display: block;
 	position: absolute;
