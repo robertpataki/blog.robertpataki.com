@@ -47,11 +47,6 @@ $(document).ready(function(){
 
 	var _resizePostTitle = function() {
 		var titlePositionY = $title.height() * -1.5;
-
-		if(window.innerWidth <= 480) {
-			// titlePositionY = -1 * Math.round($heroImage.height() * 0.5 + $title.height() * 0.5);
-		}
-
 		$title.css({
 			'top': titlePositionY
 		});
@@ -62,6 +57,20 @@ $(document).ready(function(){
 		$window.resize();
 	}, 100);
 	$window.resize();
+
+	var _onScroll = function() {
+		if(!$html.hasClass('is-mobile')) {
+			if($window.scrollTop() > $heroImage.height()) {
+				$header.addClass('is-translucent');
+			} else {
+				$header.removeClass('is-translucent');
+			}
+		} else {
+			$header.removeClass('is-translucent');
+		}
+	};
+
+	$window.on('scroll', _onScroll);
 
 	var toggleMenu = function(e) {
 		if($header.hasClass('is-open')) {
