@@ -110,8 +110,18 @@
 .entry-comments {
 	@include span-columns(10);
 	@include shift(1);
-	border-top: 1px solid lighten($color-body-text, 30%);
-	margin: rhythm(2);
+	border-top: 1px solid lighten($color-body-text, 10%);
+	margin-top: rhythm(1);
+
+	@include media($breakpoint-2-mobile-landscape) {
+		margin-top: rhythm(0.75);
+	}
+	
+	@include media($breakpoint-1-mobile-portrait) {
+	    @include span-columns(4);
+		@include shift(0);
+		margin-top: rhythm(0.5);
+	}
 }
 
 .entry-content {

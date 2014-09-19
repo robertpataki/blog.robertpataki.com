@@ -5,6 +5,7 @@ $(document).ready(function(){
 	var $footer = $('.footer');
 	var $header = $('.l-header');
 	var $blocker = $('.content_blocker');
+	var $body = $('body');
 	var $html = $('html');
 	var $main = $('.l-main');
 	var $window = $(window);
@@ -97,7 +98,7 @@ $(document).ready(function(){
 			$blocker.on('click', _toggleMenu);
 			$html.addClass('is-scrolling-blocked');
 
-			TweenMax.to($header, 0.42, {transform: 'translateY(' +  $header.height() + 'px)', ease: Expo.easeInOut});
+			TweenMax.to($header, 0.42, {transform: 'translateY(' +  $subnav.height() + 'px)', ease: Expo.easeInOut});
 			TweenMax.to($blocker, 0.3, {opacity: 1, ease: Expo.easeInOut, onStart: function(){
 				$blocker.css({
 					'display': 'block'

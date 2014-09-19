@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Let's cook stuffed portobello mushrooms"
-intro: "Hacking some vegan stuffing with mushrooms"
+intro: "Hacking some vegan stuffing into mushrooms - it tastes a lot better than it sounds."
 hero: "/images/posts/stuffed-portobello-mushrooms-hero.jpg"
-date: 2014-08-27 10:18:40 +0100
+date: 2014-09-19 18:00:00 +0100
 comments: true
 categories: vegan recipe
+published: true
 ---
 
 <p class="post-intro">The other day I was searching for some cooking inspiration, and I stumbled upon a very nice <a class="link" href="http://blog.fatfreevegan.com/2008/08/roasted-eggplant-almond-dip.html" target="_blank">vegan recipe</a>. After making that delicious dip myself I started thinking how I could turn it into a mushroom stuffing, so I started experimenting, and I replaced the aubergines with courgettes, and I did some minor alterations to the original recipe. I was quite happy with the result, so I thought I'd share this tasty vegan creation with others.</p>
