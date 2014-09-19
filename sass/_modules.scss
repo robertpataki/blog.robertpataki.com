@@ -98,8 +98,6 @@
 	    line-height: rhythm(1.2);
 	}
 	@include media($breakpoint-1-mobile-portrait) {
-	    font-size: rhythm(0.8);
-	    line-height: rhythm(1);
 	    @include rempix(max-width, 240px);
 	}
 

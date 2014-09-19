@@ -9,6 +9,7 @@ $(document).ready(function(){
 	var $html = $('html');
 	var $main = $('.l-main');
 	var $window = $(window);
+	var $hero = $('.hero');
 	var $heroImage = $('.hero img');
 	var $title = $('.entry-title');
 	var $menuToggle = $('.subnav_button-toggle');
@@ -52,10 +53,12 @@ $(document).ready(function(){
 	}
 
 	var _resizePostTitle = function() {
-		var titlePositionY = $title.height() * -1.5;
-		$title.css({
-			'top': titlePositionY
-		});
+		setTimeout(function(){
+			var titlePositionY = Math.round(-1 * $hero.height() * 0.5 - $title.height() * 0.5);
+			$title.css({
+				'top': titlePositionY
+			});
+		}, 100);
 	}
 
 	$window.on('resize', _onResize);
