@@ -53,12 +53,10 @@ $(document).ready(function(){
 	}
 
 	var _resizePostTitle = function() {
-		setTimeout(function(){
-			var titlePositionY = Math.round(-1 * $hero.height() * 0.5 - $title.height() * 0.5);
-			$title.css({
-				'top': titlePositionY
-			});
-		}, 100);
+		var titlePositionY = Math.round(-1 * $hero.height() * 0.5 - $title.height() * 0.5);
+		$title.css({
+			'top': titlePositionY
+		});
 	}
 
 	$window.on('resize', _onResize);
@@ -131,8 +129,8 @@ $(document).ready(function(){
 		// Decent hero image loading and displaying
 		$heroImage.css({'opacity': 0});
 		$heroImage.one('load', function(e){
-			_onResize();
 			TweenMax.to($heroImage, 0.6, {css: {opacity: 1}, delay: 0.1, ease: Strong.easeOut});
+			_onResize();
 		}).each(function(){
 			if(this.complete) {
 				$(this).load();
