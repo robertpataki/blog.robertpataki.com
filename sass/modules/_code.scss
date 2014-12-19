@@ -1,0 +1,36 @@
+.codeblock {
+	@include rempix(margin-bottom, 32px);
+
+	figure.code {
+		@include rempix(padding, 12px);
+		border: $color-body-text;
+		font-size: 14px;
+		line-height: 21px;
+		color: $color-body-text;
+		background: lighten($color-highlighted-text, 60%);
+
+		&:before {
+			content: " ";
+			display: block;
+			position: absolute;
+			top: -12px;
+			left: -1px;
+			height: 12px;
+			width: 100%;
+			background: $color-highlighted-text;
+			border-left: $color-highlighted-text;
+			border-right: $color-highlighted-text;
+		}
+	}
+}
+
+.codeblock-terminal {
+	@extend .codeblock;
+	.gutter {
+		display: none;
+	}
+}
+
+h3 + .codeblock {
+	margin-top: 28px;
+}
