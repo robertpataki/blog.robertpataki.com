@@ -53,7 +53,10 @@ $(document).ready(function(){
 	}
 
 	var _resizePostTitle = function() {
-		var titlePositionY = Math.round(-1 * $hero.height() * 0.5 - $title.height() * 0.5);
+		var titlePositionY = Math.round($title.height() * -1.5);
+		if(window.innerWidth >= 480) {
+			titlePositionY = Math.round(-1 * $hero.height() * 0.5 - $title.height() * 0.5);
+		}
 		$title.css({
 			'top': titlePositionY
 		});

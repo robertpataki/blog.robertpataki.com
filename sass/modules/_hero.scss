@@ -20,6 +20,17 @@
 		float: left;
 		opacity: 0;
 	}
+
+	@include media(new-breakpoint(max-width 480px)) {
+		& {
+			.hero_image {
+				height: 396px;
+				width: 960px;
+				left: 50%;
+				margin-left: -480px;
+			}
+		}
+	}
 }
 
 .has-hero {
