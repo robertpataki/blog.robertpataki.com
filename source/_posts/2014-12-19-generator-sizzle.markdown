@@ -6,12 +6,16 @@ date: 2014-12-19 15:50:06 +0000
 hero: "/images/posts/generator-sizzle-hero.png"
 comments: true
 categories: coding yeoman
-published: false
 ---
 
 <p class="post-intro">About a year ago I started using Yeoman, and I'm absoltely loving it! All the tools it offers front-end (full stack if you like) developers are immensely powerful, and make my life very easy. Utilising Grunt and Bower, it not only makes compiling assets and managing project dependencies super easy, but with its generators developers have a great opportunity to build their own scaffolding tools, which is simply amazing.</p>
 
 The time has come for me to create my own Yeoman generator, so that I can speed up my development setup process and workflow.
+
+### Quick links
+
+- The NPM page for the generator can be found <a class="link" href="https://www.npmjs.com/package/generator-sizzle" target="_blank">here</a>.
+- The source code of the generator is on <a class="link" href="https://github.com/robertpataki/generator-sizzle" target="_blank">Github</a>.
 
 ## I can has Yeoman generator
 
@@ -75,7 +79,7 @@ Sizzle should be good to go now. To compile the source files and see what you've
 
 <div class="codeblock-terminal">
 ```
-	$ grunt serve
+$ grunt serve
 ```
 </div>
 
@@ -87,8 +91,8 @@ This tells you that Bourbon Neat is set up (with a visible visual grid), and if 
 
 <div class="codeblock-terminal">
 ```
-[Log] [Main] - ready! (application.js, line 19632)
-[Log] [App] - _init(): Sizzle is at your service! (application.js, line 19581)
+[Main] - ready! (application.js, line 19632)
+[App] - _init(): Sizzle is at your service! (application.js, line 19581)
 ```
 </div>
 
@@ -244,6 +248,6 @@ Once the deployment process finishes Grunt will open your site's URL in Chrome, 
 
 ## Wrapping it up
 
-I hope Sizzle makes sense and will be a useful little tool for other developers too. I would love to hear your thoughts on how you find using it, and of course if there is any bugs or improvements you'd like to address, please get in touch. <a class="link" href="https://github.com/robertpataki/generator-sizzle" target="_blank">The code is hosted on Github, so any sensible contributions are welcome.</a>
+I hope Sizzle makes sense and will be a useful little tool for other developers too. I would love to hear your thoughts on how you find using it, and of course if there is any bugs or improvements you'd like to address, please get in touch. <a class="link" href="https://github.com/robertpataki/generator-sizzle" target="_blank">The code is hosted on Github, any sensible contributions are welcome.</a>
 
 I wish you happy sizzling, and I'd like to invite you to leave your comments below :)
