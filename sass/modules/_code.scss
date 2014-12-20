@@ -22,12 +22,21 @@
 			border-right: $color-highlighted-text;
 		}
 	}
+
+	.highlight {
+		overflow: scroll;
+		overflow-y: hidden;
+		overflow-x: auto;
+	}
 }
 
 .codeblock-terminal {
 	@extend .codeblock;
 	.gutter {
 		display: none;
+	}
+	span {
+		word-wrap: break-word;
 	}
 }
 
