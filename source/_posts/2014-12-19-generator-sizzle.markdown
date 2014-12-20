@@ -91,8 +91,8 @@ This tells you that Bourbon Neat is set up (with a visible visual grid), and if 
 
 <div class="codeblock-terminal">
 ```
-[Main] - ready! (application.js, line 19632)
-[App] - _init(): Sizzle is at your service! (application.js, line 19581)
+[Log] [Main] - ready! (application.js, line 19632)
+[Log] [App] - _init(): Sizzle is at your service! (application.js, line 19581)
 ```
 </div>
 
