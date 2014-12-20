@@ -71,3 +71,13 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+hr {
+    border: none;
+    border-top: 1px solid #3b558c;
+}
+
+blockquote {
+    border-left: 12px solid lighten($color-body-text, 60%);
+    padding-left: 12px;
+}
