@@ -18,17 +18,17 @@ The time has come for me to create my own Yeoman generator, so that I can speed 
 
 Everyone has their preferred dev tools - myself included. For a typical project I like to use:
 
-- jQuery
-- RequireJS
-- Greensock
-- FastClick
-- JSSignals
+- **jQuery** - which is a power tool offering EVERYTHING from DOM selection to making XHR calls, and anything else you could EVER wish for
+- **RequireJS** -	for leveraging the benefits of AMD modules and keep my code modular
+- **Greensock** - to make beautiful and well optimised, super smooth animations and transitions
+- **FastClick** - for making my apps react to user taps as fast as possible on mobile devices, bypassing the ~300ms delay added by the mobile browsers
+- **JSSignals** - to implement a nice signal based event dispatch/receive system in my apps (instead of callback hell)
 
 for scripting; and for my stylesheets I prefer using:
 
-- Compass
-- Normalize
-- Bourbon and Neat
+- **Compass** - a very powerful SASS compiler with added awesomeness (such as font loading, inline svg and image generation, and CSS minification / uglification)
+- **Normalize** - my preferred way of resetting the CSS browser defaults
+- **Bourbon** and Neat - for extensive tools such as vendor prefixing, animations, grid system and other useful utitilies
 
 And of course, Bower for dependency management and Grunt for running automated tasks are killer features, so Yeoman is the ultimate choice. I also find it handy to have a Grunt task for deployment over SSH.
 
@@ -116,7 +116,7 @@ OK, so you sucessfully set up your project, now let's have a look at how you can
 ```
 </div>
 
-As you can see it's the usual Yeoman stuff: `app` and `dist` folders for your source code, and the compiled output. There are also the regular Yeoman config filesm and the project's dependency manifests.
+As you can see it's the usual Yeoman stuff: `app` and `dist` folders for your source code, and the compiled output. There are also the regular Yeoman config files, and the project's dependency manifests.
 
 The only noticeable thing here is the `secret.json` file, which is used for SSH deployment via Grunt - I will talk about this one later.
 
@@ -171,7 +171,7 @@ Now let's see how the stylesheets work in Sizzle.
 
 {% img post-photo /images/posts/generator-sizzle-4-preview.png The application.scss file %}
 
-As you can see all the stylesheet modules are loaded into `application.scss`, which Compass brings all into one single output. If you have used SASS before, probably this is no news for you. I tried to set up the stylesheets with some common sense: There is a file for variables, there is one for base reset, there is the grid settings file, and finally there is 1 stylesheet for generic modules. This setup gives you the freedom of implementing your preferred method for working with CSS - should you want to use a SMACCS-like approach, or anything else.
+As you can see all the stylesheet modules are loaded into `application.scss`, which Compass brings all into one single output. If you have used SASS before, probably this is no news for you. I tried to set up the stylesheets with some common sense: There is a file for variables, there is one for base reset, there is the grid settings file, and finally there is 1 stylesheet for generic modules. This setup gives you the freedom of implementing your preferred method for working with CSS - should you want to use a SMACSS-like approach, or anything else.
 
 I really like Compass's capability of embedding inline images into stylesheets, and that it also can generate sprites. I normally rely on Compass as a compiler, but for mixins and helpers I prefer using Bourbon. The reason to that is that back in the day when I was using Compass with Rails I noticed that Compass was a bit abandoned for a while, and loads of its features were undocumented, or the documentation was out of date. Also, browser vendors have implemented a lot of the stuff that didn't need mixins or helpers anymore, so I decided to stick with Bourbon, which seemed a lot more up to date at the time. This of course is down to personal taste, if you prefer Compass, feel free to use that one.
 
