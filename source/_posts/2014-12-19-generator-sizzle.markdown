@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "generator-sizzle"
-intro: "I just published my first npm module for Yeoman - here is why."
+intro: "I just published my first npm module for Yeoman."
 date: 2014-12-19 15:50:06 +0000
+updated: 2015-01-13 14:00:00 +0000
 hero: "/images/posts/generator-sizzle-hero.png"
 comments: true
 categories: coding yeoman
