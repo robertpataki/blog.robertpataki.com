@@ -12,11 +12,11 @@ categories: story
 
 ## A very quick introduction... to myself and the blog
 
-To keep the blog very simple I am not planning to add an obligatory 'About' page, so let me quickly introduce myself: I am <a class="link" href="http://robertpataki.com">Rob Pataki</a>, a full stack web developer from Budapest (Hungary), living and working in the colourful East London since 2009 with my lady Claire, who I very much love.
+To keep the blog very simple I am not planning to add an obligatory 'About' page, so let me quickly introduce myself: I am <a class="link" href="http://robertpataki.com">Rob Pataki</a>, a full stack web developer from Budapest (Hungary), living and working in the colourful East London since late 2009.
 
-This is my third attempt to have a decent blog, and this time I promise I won't let myself to be distracted by silly things, and I will actually write stuff. Here I am planning to write about things I love to do with true passion: coding, cooking, and everything that comes along. No big plans, just want to keep it simple really.
+This is my third attempt to have a decent blog, and this time I promise I won't let myself to be distracted by silly things, and I will actually write stuff. Here I am planning to write about things I love to do with true passion: coding, vegan cooking, and everything that comes along. No big plans, just want to keep it simple really.
 
-If you think writing about JavaScript and vegan cooking in one platform is a bit of a strange thing, probably you're right. But we are all different and I like to think that creativity should be practiced and gained through different (often unrelated) subjects. I love experimenting with vegetables in the kitchen just as much as I do with JavaScript and CSS.
+If you think writing about JavaScript and vegan cooking in one platform is a bit of a strange thing, probably you're right. But we are all different and I like to think that creativity should be practiced and gained through different (often unrelated) subjects. I love experimenting with vegetables in the kitchen just as much as I do with HMTML, JavaScript, and CSS.
 
 ## A bit about the technical stuff
 
