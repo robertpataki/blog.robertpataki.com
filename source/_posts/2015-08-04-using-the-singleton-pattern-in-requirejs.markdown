@@ -8,7 +8,7 @@ hero: "/images/posts/general-hero.png"
 categories: coding javascript requirejs singleton
 ---
 
-<p class="post-intro">Using the singleton pattern in your RequireJS app has it's advantages, below is a very simple implementation, enjoy :)</p>
+<p class="post-intro">Using the singleton pattern in your RequireJS app has its advantages, below is a very simple implementation, enjoy :)</p>
 
 <div class="codeblock-terminal">
 ```
@@ -62,7 +62,7 @@ An example of accessing the public methods of the singleton instance:
 ```
 </div>
 
-And here is a quick test to see if there is no cheekyness and there is indeed only once instance existing:
+And here is a quick test to see if there is no cheekiness, and there is indeed only once instance existing:
 
 <div class="codeblock-terminal">
 ```
