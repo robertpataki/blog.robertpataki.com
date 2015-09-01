@@ -24,5 +24,5 @@
 	<meta property="og:description" content="{% if page.intro %}{{ page.intro }}{% else %}Robert Pataki's ramblings on vegan coding{% endif %}" />
 	<meta property="og:url" content="{{ site.url }}{% if page.url %}{{ page.url | remove:'index.html' }}{% endif %}" />
 	<meta property="og:site_name" content="{{site.title}} - Robert Pataki's ramblings on vegan coding"/>
-	<meta property="og:image" content="{% if page.hero %}{{page.hero}}{% else %}apple-touch-icon.png{% endif %}" />
+	<meta property="og:image" content="{% if page.hero %}{{site.url}}{{page.hero}}{% else %}{{site.url}}/apple-touch-icon.png{% endif %}" />
 </head>
