@@ -354,15 +354,25 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com"
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_layouts",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_posts"
 	],
 	"file_history":
 	[
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_posts/2015-08-04-using-the-singleton-pattern-in-requirejs.markdown",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_posts/2015-08-04-crisp-canvas-text-on-any-resolution-with-pixi-dot-js.markdown",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_posts/2014-12-19-generator-sizzle.markdown",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/.git/COMMIT_EDITMSG",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/sass/_variables.scss",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/sass/modules/_hero.scss",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_layouts/post.html",
+		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/_deploy/blog/categories/yeoman/atom.xml",
 		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_posts/2014-08-30-chilli-con-carne.markdown",
 		"/Users/rob/.ssh/config",
 		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/Rakefile",
 		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_posts/2015-03-29-chunky-veg-soup.markdown",
-		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/.git/COMMIT_EDITMSG",
 		"/Users/rob/.ssh/known_hosts",
 		"/Users/rob/.ssh/github",
 		"/Users/rob/Work/robertpataki.com/blog.robertpataki.com/source/_posts/2014-09-19-stuffed-portobello-mushrooms.markdown",
@@ -478,14 +488,7 @@
 		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/ffi-1.9.3/ext/ffi_c/StructByValue.c",
 		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/bourbon-compass-4.0.2/stylesheets/bourbon/css3/_backface-visibility.scss",
 		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_unstyled-link.scss",
-		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/links/_hover-link.scss",
-		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/links/_unstyled-link.scss",
-		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/_links.scss",
-		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_hover-link.scss",
-		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/compass-1.0.1/test/fixtures/stylesheets/compass/sass/typography/links/hover-link.scss",
-		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/kramdown-1.4.1/doc/links.markdown",
-		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/i18n-0.6.11/lib/i18n/tests/link.rb",
-		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/tzinfo-1.2.2/lib/tzinfo/linked_timezone_info.rb"
+		"/Users/rob/Workspace/robertpataki.com/blog.robertpataki.com/vendor/bundle/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/links/_hover-link.scss"
 	],
 	"find":
 	{
@@ -581,6 +584,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"it's",
+			"hello ",
 			"voom",
 			"voom.github",
 			"voom",
@@ -706,9 +711,7 @@
 			"onREsize",
 			"copyAndScaleImage",
 			"loadImage",
-			"setupfilter",
-			"console.log",
-			"uploadFile"
+			"setupfilter"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -781,6 +784,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"crips",
+				"source/_posts/2015-08-04-crisp-canvas-text-on-any-resolution-with-pixi-dot-js.markdown"
+			],
+			[
+				"sizzle",
+				"source/_posts/2014-12-19-generator-sizzle.markdown"
+			],
+			[
+				"variables",
+				"sass/_variables.scss"
+			],
+			[
+				"hero.scs",
+				"sass/modules/_hero.scss"
+			],
+			[
+				"yeoman",
+				"_deploy/blog/categories/yeoman/atom.xml"
+			],
 			[
 				"chill",
 				"source/_posts/2014-08-30-chilli-con-carne.markdown"
@@ -872,10 +895,6 @@
 			[
 				"config.yml",
 				"_config.yml"
-			],
-			[
-				"variables",
-				"sass/_variables.scss"
 			],
 			[
 				"paginav.html",
@@ -1276,22 +1295,6 @@
 			[
 				"grid.scss",
 				"app/styles/_grid.scss"
-			],
-			[
-				"gallery.js",
-				"app/scripts/controllers/gallerypage.js"
-			],
-			[
-				"authpage.js",
-				"app/scripts/controllers/authpage.js"
-			],
-			[
-				"authpage",
-				"app/views/pages/auth/page.auth.html"
-			],
-			[
-				"phototoolnav",
-				"app/views/pages/phototool/partial.phototool-nav.html"
 			]
 		],
 		"width": 0.0

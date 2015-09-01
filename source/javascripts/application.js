@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 	var _onScroll = function() {
 		if(!$html.hasClass('touch') && !$html.hasClass('is-mobile') && $heroImage.length) {
-			if($window.scrollTop() > $heroImage.height()) {
+			if($window.scrollTop() > $heroImage.height() + 55) {
 				$header.addClass('is-translucent');
 			} else {
 				$header.removeClass('is-translucent');
