@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Delicious oven baked vegan fasirt"
-intro: "Fasirt blabla"
+intro: "My vegan alternative of the traditional Hungarian fasirt"
 hero: "/images/posts/vegan-fasirt-hero.jpg"
 date: 2015-08-31 12:58:01 +0100
 comments: true
-categories: vegan recipe
+categories: vegan recipe fasirt falafel
 ---
 
 <p class="post-intro">Hungarian fasirt is traditionally made using minced beef or pork, and deep fried in a lot of vegetable oil - very tasty but not so healthy, nor it is vegan :) The recipe below is a vegan alternative to this delicious bite-sized phenomena.</p>
