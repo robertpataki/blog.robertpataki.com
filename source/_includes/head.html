@@ -21,7 +21,7 @@
 
 	<!-- Facebook -->
 	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" />
-	<meta property="og:url" content="{% if page.url %}{{ page.url | remove:'index.html' }}{% else %}{{ site.url }}{% endif %}" />
+	<meta property="og:url" content="{{ site.url }}{% if page.url %}{{ page.url | remove:'index.html' }}{% endif %}" />
 	<meta property="og:site_name" content="{{site.title}} - Robert Pataki's rambling about vegan coding"/>
 	<meta property="og:image" content="{% if page.hero %}{{page.hero}}{% else %}apple-touch-icon.png{% endif %}" />
 </head>
