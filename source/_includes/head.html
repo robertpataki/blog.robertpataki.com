@@ -18,4 +18,10 @@
 
 	<link rel="stylesheet" href="{{root_url}}/stylesheets/style.css?v=3" />
 	<link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+
+	<!-- Facebook -->
+	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" />
+	<meta property="og:url" content="{% if page.url %}{{ page.url | remove:'index.html' }}{% else %}{{ site.url }}{% endif %}" />
+	<meta property="og:site_name" content="{{site.title}} - Robert Pataki's rambling about vegan coding"/>
+	<meta property="og:image" content="{% if page.hero %}{{page.hero}}{% else %}apple-touch-icon.png{% endif %}" />
 </head>
