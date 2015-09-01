@@ -6,7 +6,7 @@
 
 	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 	{% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
-	<meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+	<meta name="description" content="{% if page.intro %}{{ page.intro }}{% else %}Robert Pataki's ramblings on vegan coding{% endif %}">
 	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 	<meta name="author" content="{{ site.author }}" />
 	<link rel="author" href="{{ root_url }}/humans.txt" />
@@ -21,7 +21,8 @@
 
 	<!-- Facebook -->
 	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" />
+	<meta property="og:description" content="{% if page.intro %}{{ page.intro }}{% else %}Robert Pataki's ramblings on vegan coding{% endif %}" />
 	<meta property="og:url" content="{{ site.url }}{% if page.url %}{{ page.url | remove:'index.html' }}{% endif %}" />
-	<meta property="og:site_name" content="{{site.title}} - Robert Pataki's rambling about vegan coding"/>
+	<meta property="og:site_name" content="{{site.title}} - Robert Pataki's ramblings on vegan coding"/>
 	<meta property="og:image" content="{% if page.hero %}{{page.hero}}{% else %}apple-touch-icon.png{% endif %}" />
 </head>

@@ -5,9 +5,9 @@
 url: http://blog.robertpataki.com
 title: Hello. Yes, this is blog.
 # subtitle: 
-author: Rob Pataki
+author: Robert Pataki
 # simple_search: https://www.google.com/search
-description:
+description: Robert Pataki's ramblings on vegan coding
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
