@@ -56,7 +56,7 @@ Once your mixture is ready, you should be able to form little balls, which won't
 
 * Take the patties out the fridge
 * Heat up the oven to ~220°C
-* Place the patties into an over dish and leave them in the oven for about 25 minutes, or until they get golden brown.
+* Place the patties into an oven dish and leave them in the oven for about 25 minutes, or until they get golden brown.
 
 You can serve the patties with virtually any sides - rice, cooked or mashed potatoes, or some fresh bread :)
 
