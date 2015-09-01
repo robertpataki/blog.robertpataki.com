@@ -20,7 +20,7 @@ As opposed to deep frying I prefer using less (or even no oil at all) and oven b
 ## Ingredients (for 3)
 
 * 1/2 onion
-* Soya mince
+* 150 grams of soya mince
 * Oat flakes
 * Olive oil
 * 3 cloves of garlic
