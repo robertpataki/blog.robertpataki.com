@@ -2,16 +2,16 @@
 {% include head.html %}
 <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.index_view %} class="is-index-view" {% endif %}>
   	{% include header.html %}
-  	
+
   	<div class="content_blocker"></div>
-	
+
 	<section id="main-container" class="l-main">
 		{{ content | expand_urls: root_url }}
 	</section>
 
 	{% include footer.html %}
 
-	<script type="text/javascript" src="{{ root_url }}/javascripts/vendor/jquery-2.1.1.js"></script>
+  <script type="text/javascript" src="{{ root_url }}/javascripts/vendor/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="{{ root_url }}/javascripts/vendor/fastclick.js"></script>
 	<script type="text/javascript" src="{{ root_url }}/javascripts/vendor/TweenMax.min.js"></script>
 	<script type="text/javascript" src="{{ root_url }}/javascripts/application.js"></script>
