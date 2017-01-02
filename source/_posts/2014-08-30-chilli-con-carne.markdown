@@ -10,7 +10,7 @@ categories: vegan recipe
 
 <p class="post-intro">I remember my mum's finest chilli con carne recipe from when I was little. It had loads of minced beef in it, and we used to have it with fresh bread and sour cream - we're Hungarian after all. This is the kind of meal you always have seconds of.</p>
 
-This is one of those recipes I learnt from my mum but through the years I have sligthly altered it - especially since I have been a vegan. Claire keeps telling me this is still my best recipe, so here it is: I'll reveal my secret and show you how to cook a fine vegan chilli con carne!
+This is one of those recipes I learnt from my mum but through the years I have sligthly altered it - especially since I have been a vegan. Apparently this is one of my best recipes, so here it is: I'll reveal my secret and show you how to cook a fine vegan chilli con carne!
 
 ## Time required
 
