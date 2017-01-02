@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: requirejs | Hello. Yes, this is blog.]]></title>
+  <link href="https://blog.robertpataki.com//categories/requirejs/atom.xml" rel="self"/>
+  <link href="https://blog.robertpataki.com/"/>
+  <updated>2017-01-02T12:41:40+00:00</updated>
+  <id>https://blog.robertpataki.com/</id>
+  <author>
+    <name><![CDATA[Robert Pataki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using the singleton pattern in RequireJS]]></title>
+    <link href="https://blog.robertpataki.com/2015/08/04/using-the-singleton-pattern-in-requirejs/"/>
+    <updated>2015-08-04T09:17:07+01:00</updated>
+    <id>https://blog.robertpataki.com/2015/08/04/using-the-singleton-pattern-in-requirejs</id>
+    <content type="html"><![CDATA[<p class="post-intro">Using the singleton pattern in your RequireJS app has its advantages, below is a very simple implementation, enjoy :)</p>
+
+
+
+
+<div class="codeblock-terminal">
+&#8220;`
+    define([],
+
+        function() {
+
+            &#8216;use strict&#8217;;
+        
+            var instance = null;
+     
+            function Singie() {
+                if(!!!instance){
+                    this.initialize();
+                    instance = this;
+                }
+                window.SINGIE = instance; // Good to have reference on window
+                return instance;
+            };
+
+            Singie.prototype = {
+                initialize: function() {
+                    // Private vars
+                    this._hello = &#8216;Hello&#8217;;
+
+                    // Public methods
+                    this.sayHello = function sayHello(name) {
+                        var n = name || &#8216;Anonymous&#8217;;
+                        console.log(this._hello + &#8217; &#8217; + n);
+                    }
+                }
+            };
+
+            return Singie;
+        }
+    );
+&#8220;`
+</div>
+
+
+<p>The above code lets you use one single instance of the &lsquo;Singie&rsquo; module, as it always will return its sole instance - no matter how many times you instantiate it.</p>
+
+<p>An example of accessing the public methods of the singleton instance:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    var singie = new Singie();
+    singie.sayHello(&#8216;Foo&#8217;);
+    
+    // Will put &#8216;Hello Foo&#8217; in the console
+&#8220;`
+</div>
+
+
+<p>And here is a quick test to see if there is no cheekiness, and there is indeed only once instance existing:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    var singie = new Singie();
+    var singieClone = new Singie();
+    console.log(singie === singieClone);
+
+    // Will put true in the console
+&#8220;`
+</div>
+
+
+<p>Having a reference on the &lsquo;window&rsquo; object can also come handy:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    var singie = new Singie();
+    SINGIE.sayHello(&#8216;Bar&#8217;);
+
+    // Will put &#8216;Hello Bar&#8217; in the console
+&#8220;`
+</div>
+
+
+<p>That&rsquo;s all folks!</p>
+]]></content>
+  </entry>
+  
+</feed>

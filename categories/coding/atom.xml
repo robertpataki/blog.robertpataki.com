@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: coding | Hello. Yes, this is blog.]]></title>
+  <link href="https://blog.robertpataki.com//categories/coding/atom.xml" rel="self"/>
+  <link href="https://blog.robertpataki.com/"/>
+  <updated>2017-01-02T12:41:40+00:00</updated>
+  <id>https://blog.robertpataki.com/</id>
+  <author>
+    <name><![CDATA[Robert Pataki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using the singleton pattern in RequireJS]]></title>
+    <link href="https://blog.robertpataki.com/2015/08/04/using-the-singleton-pattern-in-requirejs/"/>
+    <updated>2015-08-04T09:17:07+01:00</updated>
+    <id>https://blog.robertpataki.com/2015/08/04/using-the-singleton-pattern-in-requirejs</id>
+    <content type="html"><![CDATA[<p class="post-intro">Using the singleton pattern in your RequireJS app has its advantages, below is a very simple implementation, enjoy :)</p>
+
+
+
+
+<div class="codeblock-terminal">
+&#8220;`
+    define([],
+
+        function() {
+
+            &#8216;use strict&#8217;;
+        
+            var instance = null;
+     
+            function Singie() {
+                if(!!!instance){
+                    this.initialize();
+                    instance = this;
+                }
+                window.SINGIE = instance; // Good to have reference on window
+                return instance;
+            };
+
+            Singie.prototype = {
+                initialize: function() {
+                    // Private vars
+                    this._hello = &#8216;Hello&#8217;;
+
+                    // Public methods
+                    this.sayHello = function sayHello(name) {
+                        var n = name || &#8216;Anonymous&#8217;;
+                        console.log(this._hello + &#8217; &#8217; + n);
+                    }
+                }
+            };
+
+            return Singie;
+        }
+    );
+&#8220;`
+</div>
+
+
+<p>The above code lets you use one single instance of the &lsquo;Singie&rsquo; module, as it always will return its sole instance - no matter how many times you instantiate it.</p>
+
+<p>An example of accessing the public methods of the singleton instance:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    var singie = new Singie();
+    singie.sayHello(&#8216;Foo&#8217;);
+    
+    // Will put &#8216;Hello Foo&#8217; in the console
+&#8220;`
+</div>
+
+
+<p>And here is a quick test to see if there is no cheekiness, and there is indeed only once instance existing:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    var singie = new Singie();
+    var singieClone = new Singie();
+    console.log(singie === singieClone);
+
+    // Will put true in the console
+&#8220;`
+</div>
+
+
+<p>Having a reference on the &lsquo;window&rsquo; object can also come handy:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    var singie = new Singie();
+    SINGIE.sayHello(&#8216;Bar&#8217;);
+
+    // Will put &#8216;Hello Bar&#8217; in the console
+&#8220;`
+</div>
+
+
+<p>That&rsquo;s all folks!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[generator-sizzle]]></title>
+    <link href="https://blog.robertpataki.com/2014/12/19/generator-sizzle/"/>
+    <updated>2014-12-19T15:50:06+00:00</updated>
+    <id>https://blog.robertpataki.com/2014/12/19/generator-sizzle</id>
+    <content type="html"><![CDATA[<p class="post-intro">About a year ago I started using Yeoman, and I&#8217;m absoltely loving it! All the tools it offers front-end (full stack if you like) developers are immensely powerful, and make my life very easy. Utilising Grunt and Bower, it not only makes compiling assets and managing project dependencies super easy, but with its generators developers have a great opportunity to build their own scaffolding tools, which is simply amazing.</p>
+
+
+<p>The time has come for me to create my own Yeoman generator, so that I can speed up my development setup process and workflow.</p>
+
+<blockquote><p>You can find the NPM package <a class="link" href="https://www.npmjs.com/package/generator-sizzle" target="_blank">here</a>, and the source is on <a class="link" href="https://github.com/robertpataki/generator-sizzle" target="_blank">Github</a>.</p></blockquote>
+
+<h2>I can has Yeoman generator</h2>
+
+<p>Everyone has their preferred dev tools - myself included. For a typical project I like to use:</p>
+
+<ul>
+<li><strong>jQuery</strong> - which is a power tool offering EVERYTHING from DOM selection to making XHR calls, and anything else you could EVER wish for</li>
+<li><strong>RequireJS</strong> -   for leveraging the benefits of AMD modules and keep my code modular</li>
+<li><strong>Greensock</strong> - to make beautiful and well optimised, super smooth animations and transitions</li>
+<li><strong>FastClick</strong> - for making my apps react to user taps as fast as possible on mobile devices, bypassing the ~300ms delay added by the mobile browsers</li>
+<li><strong>JSSignals</strong> - to implement a nice signal based event dispatch/receive system in my apps (instead of callback hell)</li>
+</ul>
+
+
+<p>for scripting; and for my stylesheets I prefer using:</p>
+
+<ul>
+<li><strong>Compass</strong> - a very powerful SASS compiler with added awesomeness (such as font loading, inline svg and image generation, and CSS minification / uglification)</li>
+<li><strong>Normalize</strong> - my preferred way of resetting the CSS browser defaults</li>
+<li><strong>Bourbon</strong> and Neat - for extensive tools such as vendor prefixing, animations, grid system and other useful utitilies</li>
+</ul>
+
+
+<p>And of course, Bower for dependency management and Grunt for running automated tasks are killer features, so Yeoman is the ultimate choice. I also find it handy to have a Grunt task for deployment over SSH.</p>
+
+<p>Naturally these are quite specific requirements, and certainly there aren&rsquo;t any Yeoman generators out there, which would offer these right out of the box.</p>
+
+<p>For that very reason I usually start off a typical front-end project with scaffolding it up using Yeoman&rsquo;s good old <a class="link" href="https://github.com/yeoman/generator-webapp" target="_blank">&lsquo;webapp&rsquo; generator</a>, which gives me a well organised folder structure, and most of the tools I need: jQuery, Livereload, smartie stylesheets with SASS support and script compilers - and of course code minification, uglification, concatenation - all that jazz.</p>
+
+<p>However, as I prefer using Compass to Sass, and I like using RequireJS to keep my code modular, I always have to fiddle around to get rid off the fluff, and install my preferred dependencies, and add my bits to the Gruntfile - which obviously always takes time. Not even mentioning the fact, that I don&rsquo;t like using Bootstrap (simply because I don&rsquo;t want even my prototypes to look like any &lsquo;just-another-twitter-bootstrap-clone&rsquo; app), I always opt out of Bootstrap and use <a class="link" href="http://neat.bourbon.io/" target="_blank">Bourbon Neat</a> instead.</p>
+
+<hr />
+
+<h2>$ yo sizzle</h2>
+
+<p>It is a great thing, that developers can have their preferred Yeoman toolset put together into a sweet NPM package, so that they can have their own scaffolding generator. Following the <a class="link" href="http://yeoman.io/authoring/" target="_blank">Yeoman generator guide</a> I built <code>generator-sizzle</code>, which now lets me setting up a new project just the way I like it well within a ~minute.</p>
+
+<p>To install Sizzle from your command line run:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    $ npm install -g generator-sizzle
+&#8220;`
+</div>
+
+
+<p>Once Sizzle is installed, you can get Yeoman to scaffold your project with it:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    $ yo sizzle
+&#8220;`
+</div>
+
+
+<p>When the generator is done with the initial set up, you need to install Compass:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+    $ bundle install
+&#8220;`
+</div>
+
+
+<p>This tells Bundle to install the compass ruby gem using the Gemfile from the project&rsquo;s root.</p>
+
+<p>(If you haven&rsquo;t got Bundle (or Ruby) installed already, please have a look at the <code>README.md</code> file in the Sizzle repo, it will explain how to install Compass on your machine).</p>
+
+<p>Sizzle should be good to go now. To compile the source files and see what you&rsquo;ve got, run</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+$ grunt serve
+&#8220;`
+</div>
+
+
+<p>which should open the web app in your browser:</p>
+
+<p><img class="post-photo" src="/images/posts/generator-sizzle-1-preview.png" title="The scaffolded Sizzle app in the browser" ></p>
+
+<p>This tells you that Bourbon Neat is set up (with a visible visual grid), and if you open your Console, you should see some logs too:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+[Log] [Main] - ready! (application.js, line 19632)
+[Log] [App] - _init(): Sizzle is at your service! (application.js, line 19581)
+&#8220;`
+</div>
+
+
+<p>which shows that RequireJS is happy too, and the app is up and running.</p>
+
+<hr />
+
+<h2>Start sizzling</h2>
+
+<p>OK, so you sucessfully set up your project, now let&rsquo;s have a look at how you can start working on your new project! First of all, take a quick look at the project root!</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+├───app/
+├───bower_components/
+├───bower.json
+├───config.json
+├───dist/
+├───Gemfile
+├───Gruntfile.js
+├───node_modules/
+├───package.json
+├───secret.json 
+&#8220;`
+</div>
+
+
+<p>As you can see it&rsquo;s the usual Yeoman stuff: <code>app</code> and <code>dist</code> folders for your source code, and the compiled output. There are also the regular Yeoman config files, and the project&rsquo;s dependency manifests.</p>
+
+<p>The only noticeable thing here is the <code>secret.json</code> file, which is used for SSH deployment via Grunt - I will talk about this one later.</p>
+
+<h3>The app folder</h3>
+
+<p>Now let&rsquo;s have a quick look at the app folder:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+├───app/
+    └───favicon.ico
+    └───images/
+        └───inline/
+        │ └───svg/
+        └───yeoman-sizzle.png
+    └───index.html
+    └───robots.txt
+    └───scripts/
+        └───app.js
+        └───main.js
+    └───styles/
+        └───_base.scss
+        └───_grid-settings.scss
+        └───_modules.scss
+        └───_variables.scss
+        └───application.scss
+&#8220;`
+</div>
+
+
+<p>The folder structure follows the usual web app structure. Other than the usual web app folder structure, there are a few things, that Sizzle adds to the <code>app</code> folder:</p>
+
+<ul>
+<li><code>inline/svg</code> folder, which is for your svg icons/images, that you want to have embedded in your CSS rather than polluting your markup with them;</li>
+<li><code>scripts</code> folder contains a basic RequireJS app;</li>
+<li><code>styles</code> has an initial setup including variables, the Bourbon Neat grid settings, and simple styling through <code>_modules</code>. All stylesheet modules are imported in the <code>application.scss</code> manifest.</li>
+</ul>
+
+
+<p>Now let&rsquo;s have a quick peek at the <code>index.html</code> file!</p>
+
+<h3>The index.html file</h3>
+
+<p><img class="post-photo" src="/images/posts/generator-sizzle-2-preview.png" title="The index.html file" ></p>
+
+<p>Sizzle keeps the markup very simple and adds some sensible defaults only. As you can see, there is only 2 HTTP requests the app makes through the index.html file:</p>
+
+<ul>
+<li><code>application.css</code></li>
+<li><code>application.js</code></li>
+</ul>
+
+
+<p>The stylesheet is loaded at the bottom of the <code>&lt;head&gt;</code> tag, and the app JS file is loaded before the <code>&lt;/body&gt;</code> tag. That is to make sure that the stylesheets are loaded before the DOM, but the JavaScripts won&rsquo;t obstruct the DOM loading, and it only kicks in, once every element in the DOM is ready.</p>
+
+<p>Now let&rsquo;s see how the stylesheets work in Sizzle.</p>
+
+<h3>Styling your app</h3>
+
+<p><img class="post-photo" src="/images/posts/generator-sizzle-4-preview.png" title="The application.scss file" ></p>
+
+<p>As you can see all the stylesheet modules are loaded into <code>application.scss</code>, which Compass brings all into one single output. If you have used SASS before, probably this is no news for you. I tried to set up the stylesheets with some common sense: There is a file for variables, there is one for base reset, there is the grid settings file, and finally there is 1 stylesheet for generic modules. This setup gives you the freedom of implementing your preferred method for working with CSS - should you want to use a SMACSS-like approach, or anything else.</p>
+
+<p>I really like Compass&rsquo;s capability of embedding inline images into stylesheets, and that it also can generate sprites. I normally rely on Compass as a compiler, but for mixins and helpers I prefer using Bourbon. The reason to that is that back in the day when I was using Compass with Rails I noticed that Compass was a bit abandoned for a while, and loads of its features were undocumented, or the documentation was out of date. Also, browser vendors have implemented a lot of the stuff that didn&rsquo;t need mixins or helpers anymore, so I decided to stick with Bourbon, which seemed a lot more up to date at the time. This of course is down to personal taste, if you prefer Compass, feel free to use that one.</p>
+
+<p>When developing your project (<code>$ grunt serve</code>) Compass brings all modules together into <code>application.css</code>, but will keep the output easy to read, so that you can debug it with ease. Once you build the project (<code>$ grunt build</code>) it minifies, uglifies and removes all comments from the output to keep it neat and make it faster to load over HTTP.</p>
+
+<p>To get an idea of how Compass is set up in Sizzle, please refer to the <code>Gruntfile</code>.</p>
+
+<h3>Scripting your app</h3>
+
+<p>When I write my scripts I prefer sticking to some sort of modular method, so that my code is well structured, and is easy for other developers to read and work with. For this I&rsquo;ve found using RequireJS the best tool, as it&rsquo;s lightweight and it gives a nice structure through AMD modules without any framework overbloat.</p>
+
+<p><a class="link" href="https://github.com/yeoman/grunt-usemin/issues/112#issuecomment-17776979" target="_blank">Since the Yeoman team have decided to drop support for RequireJS entirely</a>, getting RequireJS working in a Yeoman project has caused me quite some head scratching. I&rsquo;ve found that the best solution is using the <code>r.js</code> optimiser with <a class="link" href="https://github.com/jrburke/almond" target="_blank">Almond</a>. This is a pretty sweet solution, as most developers use RequireJS to keep their code modular, but once their app is live, they don&rsquo;t want to bloat their code with unused functionality, which comes with RequireJS.</p>
+
+<p>The app&rsquo;s JavaScript dependencies are all defined in <code>main.js</code>, and all JS modules should reflect structure of <code>app.js</code>.</p>
+
+<p><img class="post-photo" src="/images/posts/generator-sizzle-3-preview.png" title="The application.js file" ></p>
+
+<p>Sizzle adds jQuery, JSSignals, FastClick, Greensock and a RequireJS text plugin for lean templating. I&rsquo;ve used all these in my project for a while now, so I find them quite handy, but of course you can replace these to fit your taste.</p>
+
+<blockquote><p>When working on your code, Compass is constantly watching out for changes in the stylesheets, so does <code>r.js</code> in the JS files. When you make any changes to your files the browser will reflect them pretty much instantly. Be aware that stylesheets will only refresh the styling in the browser, but changing JavaScript files will reload the whole page.</p></blockquote>
+
+<h3>Deploying your app</h3>
+
+<p>This is one of my favourite features of Grunt! Using a sleek tool to quickly deploy your code to a server from the command line is really powerful and replaces the need for old fashioned SFTP clients.</p>
+
+<p>In Sizzle I included the <a class="link" href="https://github.com/chuckmo/grunt-ssh" target="_blank">grunt-ssh</a> npm module, which can be configured easily through the <code>Gruntfile</code>. I prefer keeping my server details and credentials in a separate file, which what the <code>secret.json</code> file is for:</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+{
+    &#8220;staging&#8221;: {
+        &#8220;host&#8221; : &#8220;&#8221;,
+        &#8220;path&#8221; : &#8220;&#8221;,
+        &#8220;username&#8221; : &#8220;&#8221;,
+        &#8220;password&#8221; : &#8220;&#8221;,
+        &#8220;publicUrl&#8221;: &#8220;&#8221;
+    },
+    &#8220;prod&#8221;: {
+        &#8220;host&#8221; : &#8220;&#8221;,
+        &#8220;path&#8221; : &#8220;&#8221;,
+        &#8220;username&#8221; : &#8220;&#8221;,
+        &#8220;password&#8221; : &#8220;&#8221;,
+        &#8220;publicUrl&#8221;: &#8220;&#8221;
+    }
+}
+&#8220;`
+</div>
+
+
+<p>Once you&rsquo;ve added your server details you can start using the</p>
+
+<div class="codeblock-terminal">
+&#8220;`
+$ grunt deploy:staging
+and
+$ grunt deploy:prod
+&#8220;`
+</div>
+
+
+<p>tasks to move your project to the server.</p>
+
+<blockquote><p>Please note, that at the moment both deployment tasks use the generic <code>build</code> task, which will completely minify and gzip the project files, which not might be handy for debugging on the server. I am planning to add a soft build task for staging deployment to improve this.</p></blockquote>
+
+<p>By default Sizzle ignores <code>secret.json</code> file. I&rsquo;d strongly advise not to change this, otherwise you might end up unintentially sharing your server credentials with others when you push your code with git.</p>
+
+<blockquote><p>Another thing to keep in mind is that when you deploy, the script cleans the remote destination folder completely. If you want to change this behaviour, simply update the <code>stfp</code> task configuration.</p></blockquote>
+
+<p>Once the deployment process finishes Grunt opens your site&rsquo;s URL in Chrome, which I find pretty handy.</p>
+
+<hr />
+
+<h2>Wrapping it up</h2>
+
+<p>Another good thing I&rsquo;ve found about Sizzle, is that it can be used in any back-end project without a problem. I&rsquo;ve used Sizzle with Rails, and with Laravel as well - and (of course with some reconfiguration) they seemed to like each other.</p>
+
+<p>I hope Sizzle makes sense and will be a useful little tool for other developers too.</p>
+
+<p>I would love to hear your thoughts on how you find using my generator, and of course if there is any bugs or improvements you&rsquo;d like to address, please get in touch. <a class="link" href="https://github.com/robertpataki/generator-sizzle" target="_blank">The code is hosted on Github, any sensible contributions are welcome.</a></p>
+
+<p>I wish you happy coding, and I&rsquo;d like to invite you to leave your comments below :)</p>
+]]></content>
+  </entry>
+  
+</feed>

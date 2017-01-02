@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>generator-sizzle - Hello. Yes, this is blog.</title>
+	
+	<meta name="description" content="I just published my first npm module for Yeoman.">
+	
+	<meta name="author" content="Robert Pataki" />
+	<link rel="author" href="/humans.txt" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<link rel="canonical" href="https://blog.robertpataki.com/2014/12/19/generator-sizzle/">
+	<link href="/favicon.ico" rel="icon">
+
+	<link rel="stylesheet" href="/stylesheets/style.css?v=3" />
+	<link href="/atom.xml" rel="alternate" title="Hello. Yes, this is blog." type="application/atom+xml">
+
+	<!-- Facebook -->
+	<meta property="og:title" content="generator-sizzle - Hello. Yes, this is blog." />
+	<meta property="og:description" content="I just published my first npm module for Yeoman." />
+	<meta property="og:url" content="https://blog.robertpataki.com/2014/12/19/generator-sizzle/" />
+	<meta property="og:site_name" content="Hello. Yes, this is blog. - Robert Pataki's ramblings on vegan coding"/>
+	<meta property="og:image" content="https://blog.robertpataki.com/images/posts/generator-sizzle-hero.png" />
+</head>
+
+<body  >
+  	<header class="l-header header-contents">
+	
+		<nav class="subnav">
+	<ul class="subnav_buttons">
+		
+		
+		<li class="subnav_button subnav_button-prev">
+			<a href="/2014/11/09/chilli-con-carne/" title="Previous Post: Let's cook Chilli con carne">
+				<svg viewBox="0 0 120 120" class="subnav_icon">
+					<g>
+						<polyline id="Right_Arrow" points="40.2,60.1 77,96.8 79.8,93.9 45.9,60 79.8,26.1 77,23.2"/>
+					</g>
+				</svg>
+			</a>
+		</li>
+		
+		
+		<li class="subnav_button subnav_button-next">
+			<a href="/2015/03/29/chunky-veg-soup/" title="Previous Post: Let's cook chunky veg soup">
+				<svg viewBox="0 0 120 120" class="subnav_icon">
+					<g>
+						<polyline points="79.8,59.9 43,23.2 40.2,26.1 74.1,60 40.2,93.9 43,96.8"/>
+					</g>
+				</svg>
+			</a>
+		</li>
+		
+
+		<li class="subnav_button subnav_button-close">
+			<a href="/">
+				<svg viewBox="0 0 120 120" class="subnav_icon">
+					<g>
+						<rect x="58" y="10" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 60 144.8528)" width="4" height="100"/>
+						<rect x="58" y="10" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -24.8528 60)" width="4" height="100"/>
+					</g>
+				</svg>
+			</a>
+		</li>
+	</ul>
+</nav>
+	
+	<h1 id="title" class="banner"><a id="title-link" href="/">Hello. Yes, this is blog.</a></h1>
+	
+		<div class="subnav_button subnav_button-toggle">
+			<svg viewBox="0 0 120 120" class="subnav_icon">
+				<g id="Burger">
+					<rect x="23" y="33" width="74" height="7"/>
+					<rect x="23" y="56" width="74" height="7"/>
+					<rect x="23" y="79" width="74" height="7"/>
+				</g>
+			</svg>
+		</div>
+	
+</header>
+<div class="header_placeholder"></div>
+
+
+
+  	<div class="content_blocker"></div>
+
+	<section id="main-container" class="l-main">
+		    
+    <div class="hero">
+        <div class="hero_ratio"></div>
+        <img class="hero_image" src="/images/posts/generator-sizzle-hero.png" />
+    </div>
+    
+
+    <div  class="has-hero l-section" >
+        <div id="content" class="l-contents">
+            <div class="entry-title">	
+	<h1 class="post-title">Generator-sizzle</h1>
+</div>
+<div class="entry-content">
+	
+	  <p class="post-date">
+	    
+
+
+
+
+
+
+
+  
+
+
+
+  
+<time datetime="2014-12-19T15:50:06+00:00" pubdate data-updated="true" class="post-date">19/12/2014</time>
+	    
+	  </p>
+	
+
+	<p class="post-intro">About a year ago I started using Yeoman, and I'm absoltely loving it! All the tools it offers front-end (full stack if you like) developers are immensely powerful, and make my life very easy. Utilising Grunt and Bower, it not only makes compiling assets and managing project dependencies super easy, but with its generators developers have a great opportunity to build their own scaffolding tools, which is simply amazing.</p>
+
+
+<p>The time has come for me to create my own Yeoman generator, so that I can speed up my development setup process and workflow.</p>
+
+<blockquote><p>You can find the NPM package <a class="link" href="https://www.npmjs.com/package/generator-sizzle" target="_blank">here</a>, and the source is on <a class="link" href="https://github.com/robertpataki/generator-sizzle" target="_blank">Github</a>.</p></blockquote>
+
+<h2>I can has Yeoman generator</h2>
+
+<p>Everyone has their preferred dev tools - myself included. For a typical project I like to use:</p>
+
+<ul>
+<li><strong>jQuery</strong> - which is a power tool offering EVERYTHING from DOM selection to making XHR calls, and anything else you could EVER wish for</li>
+<li><strong>RequireJS</strong> -   for leveraging the benefits of AMD modules and keep my code modular</li>
+<li><strong>Greensock</strong> - to make beautiful and well optimised, super smooth animations and transitions</li>
+<li><strong>FastClick</strong> - for making my apps react to user taps as fast as possible on mobile devices, bypassing the ~300ms delay added by the mobile browsers</li>
+<li><strong>JSSignals</strong> - to implement a nice signal based event dispatch/receive system in my apps (instead of callback hell)</li>
+</ul>
+
+
+<p>for scripting; and for my stylesheets I prefer using:</p>
+
+<ul>
+<li><strong>Compass</strong> - a very powerful SASS compiler with added awesomeness (such as font loading, inline svg and image generation, and CSS minification / uglification)</li>
+<li><strong>Normalize</strong> - my preferred way of resetting the CSS browser defaults</li>
+<li><strong>Bourbon</strong> and Neat - for extensive tools such as vendor prefixing, animations, grid system and other useful utitilies</li>
+</ul>
+
+
+<p>And of course, Bower for dependency management and Grunt for running automated tasks are killer features, so Yeoman is the ultimate choice. I also find it handy to have a Grunt task for deployment over SSH.</p>
+
+<p>Naturally these are quite specific requirements, and certainly there aren&rsquo;t any Yeoman generators out there, which would offer these right out of the box.</p>
+
+<p>For that very reason I usually start off a typical front-end project with scaffolding it up using Yeoman&rsquo;s good old <a class="link" href="https://github.com/yeoman/generator-webapp" target="_blank">&lsquo;webapp&rsquo; generator</a>, which gives me a well organised folder structure, and most of the tools I need: jQuery, Livereload, smartie stylesheets with SASS support and script compilers - and of course code minification, uglification, concatenation - all that jazz.</p>
+
+<p>However, as I prefer using Compass to Sass, and I like using RequireJS to keep my code modular, I always have to fiddle around to get rid off the fluff, and install my preferred dependencies, and add my bits to the Gruntfile - which obviously always takes time. Not even mentioning the fact, that I don&rsquo;t like using Bootstrap (simply because I don&rsquo;t want even my prototypes to look like any &lsquo;just-another-twitter-bootstrap-clone&rsquo; app), I always opt out of Bootstrap and use <a class="link" href="http://neat.bourbon.io/" target="_blank">Bourbon Neat</a> instead.</p>
+
+<hr />
+
+<h2>$ yo sizzle</h2>
+
+<p>It is a great thing, that developers can have their preferred Yeoman toolset put together into a sweet NPM package, so that they can have their own scaffolding generator. Following the <a class="link" href="http://yeoman.io/authoring/" target="_blank">Yeoman generator guide</a> I built <code>generator-sizzle</code>, which now lets me setting up a new project just the way I like it well within a ~minute.</p>
+
+<p>To install Sizzle from your command line run:</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ npm install -g generator-sizzle</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>Once Sizzle is installed, you can get Yeoman to scaffold your project with it:</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ yo sizzle</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>When the generator is done with the initial set up, you need to install Compass:</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bundle install</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>This tells Bundle to install the compass ruby gem using the Gemfile from the project&rsquo;s root.</p>
+
+<p>(If you haven&rsquo;t got Bundle (or Ruby) installed already, please have a look at the <code>README.md</code> file in the Sizzle repo, it will explain how to install Compass on your machine).</p>
+
+<p>Sizzle should be good to go now. To compile the source files and see what you&rsquo;ve got, run</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ grunt serve</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>which should open the web app in your browser:</p>
+
+<p><img class="post-photo" src="/images/posts/generator-sizzle-1-preview.png" title="The scaffolded Sizzle app in the browser" ></p>
+
+<p>This tells you that Bourbon Neat is set up (with a visible visual grid), and if you open your Console, you should see some logs too:</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[Log] [Main] - ready! (application.js, line 19632)
+</span><span class='line'>[Log] [App] - _init(): Sizzle is at your service! (application.js, line 19581)</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>which shows that RequireJS is happy too, and the app is up and running.</p>
+
+<hr />
+
+<h2>Start sizzling</h2>
+
+<p>OK, so you sucessfully set up your project, now let&rsquo;s have a look at how you can start working on your new project! First of all, take a quick look at the project root!</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>├───app/
+</span><span class='line'>├───bower_components/
+</span><span class='line'>├───bower.json
+</span><span class='line'>├───config.json
+</span><span class='line'>├───dist/
+</span><span class='line'>├───Gemfile
+</span><span class='line'>├───Gruntfile.js
+</span><span class='line'>├───node_modules/
+</span><span class='line'>├───package.json
+</span><span class='line'>├───secret.json   </span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>As you can see it&rsquo;s the usual Yeoman stuff: <code>app</code> and <code>dist</code> folders for your source code, and the compiled output. There are also the regular Yeoman config files, and the project&rsquo;s dependency manifests.</p>
+
+<p>The only noticeable thing here is the <code>secret.json</code> file, which is used for SSH deployment via Grunt - I will talk about this one later.</p>
+
+<h3>The app folder</h3>
+
+<p>Now let&rsquo;s have a quick look at the app folder:</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>├───app/
+</span><span class='line'>  └───favicon.ico
+</span><span class='line'>  └───images/
+</span><span class='line'>      └───inline/
+</span><span class='line'>      │ └───svg/
+</span><span class='line'>      └───yeoman-sizzle.png
+</span><span class='line'>  └───index.html
+</span><span class='line'>  └───robots.txt
+</span><span class='line'>  └───scripts/
+</span><span class='line'>      └───app.js
+</span><span class='line'>      └───main.js
+</span><span class='line'>  └───styles/
+</span><span class='line'>      └───_base.scss
+</span><span class='line'>      └───_grid-settings.scss
+</span><span class='line'>      └───_modules.scss
+</span><span class='line'>      └───_variables.scss
+</span><span class='line'>      └───application.scss</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>The folder structure follows the usual web app structure. Other than the usual web app folder structure, there are a few things, that Sizzle adds to the <code>app</code> folder:</p>
+
+<ul>
+<li><code>inline/svg</code> folder, which is for your svg icons/images, that you want to have embedded in your CSS rather than polluting your markup with them;</li>
+<li><code>scripts</code> folder contains a basic RequireJS app;</li>
+<li><code>styles</code> has an initial setup including variables, the Bourbon Neat grid settings, and simple styling through <code>_modules</code>. All stylesheet modules are imported in the <code>application.scss</code> manifest.</li>
+</ul>
+
+
+<p>Now let&rsquo;s have a quick peek at the <code>index.html</code> file!</p>
+
+<h3>The index.html file</h3>
+
+<p><img class="post-photo" src="/images/posts/generator-sizzle-2-preview.png" title="The index.html file" ></p>
+
+<p>Sizzle keeps the markup very simple and adds some sensible defaults only. As you can see, there is only 2 HTTP requests the app makes through the index.html file:</p>
+
+<ul>
+<li><code>application.css</code></li>
+<li><code>application.js</code></li>
+</ul>
+
+
+<p>The stylesheet is loaded at the bottom of the <code>&lt;head&gt;</code> tag, and the app JS file is loaded before the <code>&lt;/body&gt;</code> tag. That is to make sure that the stylesheets are loaded before the DOM, but the JavaScripts won&rsquo;t obstruct the DOM loading, and it only kicks in, once every element in the DOM is ready.</p>
+
+<p>Now let&rsquo;s see how the stylesheets work in Sizzle.</p>
+
+<h3>Styling your app</h3>
+
+<p><img class="post-photo" src="/images/posts/generator-sizzle-4-preview.png" title="The application.scss file" ></p>
+
+<p>As you can see all the stylesheet modules are loaded into <code>application.scss</code>, which Compass brings all into one single output. If you have used SASS before, probably this is no news for you. I tried to set up the stylesheets with some common sense: There is a file for variables, there is one for base reset, there is the grid settings file, and finally there is 1 stylesheet for generic modules. This setup gives you the freedom of implementing your preferred method for working with CSS - should you want to use a SMACSS-like approach, or anything else.</p>
+
+<p>I really like Compass&rsquo;s capability of embedding inline images into stylesheets, and that it also can generate sprites. I normally rely on Compass as a compiler, but for mixins and helpers I prefer using Bourbon. The reason to that is that back in the day when I was using Compass with Rails I noticed that Compass was a bit abandoned for a while, and loads of its features were undocumented, or the documentation was out of date. Also, browser vendors have implemented a lot of the stuff that didn&rsquo;t need mixins or helpers anymore, so I decided to stick with Bourbon, which seemed a lot more up to date at the time. This of course is down to personal taste, if you prefer Compass, feel free to use that one.</p>
+
+<p>When developing your project (<code>$ grunt serve</code>) Compass brings all modules together into <code>application.css</code>, but will keep the output easy to read, so that you can debug it with ease. Once you build the project (<code>$ grunt build</code>) it minifies, uglifies and removes all comments from the output to keep it neat and make it faster to load over HTTP.</p>
+
+<p>To get an idea of how Compass is set up in Sizzle, please refer to the <code>Gruntfile</code>.</p>
+
+<h3>Scripting your app</h3>
+
+<p>When I write my scripts I prefer sticking to some sort of modular method, so that my code is well structured, and is easy for other developers to read and work with. For this I&rsquo;ve found using RequireJS the best tool, as it&rsquo;s lightweight and it gives a nice structure through AMD modules without any framework overbloat.</p>
+
+<p><a class="link" href="https://github.com/yeoman/grunt-usemin/issues/112#issuecomment-17776979" target="_blank">Since the Yeoman team have decided to drop support for RequireJS entirely</a>, getting RequireJS working in a Yeoman project has caused me quite some head scratching. I&rsquo;ve found that the best solution is using the <code>r.js</code> optimiser with <a class="link" href="https://github.com/jrburke/almond" target="_blank">Almond</a>. This is a pretty sweet solution, as most developers use RequireJS to keep their code modular, but once their app is live, they don&rsquo;t want to bloat their code with unused functionality, which comes with RequireJS.</p>
+
+<p>The app&rsquo;s JavaScript dependencies are all defined in <code>main.js</code>, and all JS modules should reflect structure of <code>app.js</code>.</p>
+
+<p><img class="post-photo" src="/images/posts/generator-sizzle-3-preview.png" title="The application.js file" ></p>
+
+<p>Sizzle adds jQuery, JSSignals, FastClick, Greensock and a RequireJS text plugin for lean templating. I&rsquo;ve used all these in my project for a while now, so I find them quite handy, but of course you can replace these to fit your taste.</p>
+
+<blockquote><p>When working on your code, Compass is constantly watching out for changes in the stylesheets, so does <code>r.js</code> in the JS files. When you make any changes to your files the browser will reflect them pretty much instantly. Be aware that stylesheets will only refresh the styling in the browser, but changing JavaScript files will reload the whole page.</p></blockquote>
+
+<h3>Deploying your app</h3>
+
+<p>This is one of my favourite features of Grunt! Using a sleek tool to quickly deploy your code to a server from the command line is really powerful and replaces the need for old fashioned SFTP clients.</p>
+
+<p>In Sizzle I included the <a class="link" href="https://github.com/chuckmo/grunt-ssh" target="_blank">grunt-ssh</a> npm module, which can be configured easily through the <code>Gruntfile</code>. I prefer keeping my server details and credentials in a separate file, which what the <code>secret.json</code> file is for:</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>    "staging": {
+</span><span class='line'>        "host" : "",
+</span><span class='line'>        "path" : "",
+</span><span class='line'>        "username" : "",
+</span><span class='line'>        "password" : "",
+</span><span class='line'>        "publicUrl": ""
+</span><span class='line'>    },
+</span><span class='line'>    "prod": {
+</span><span class='line'>        "host" : "",
+</span><span class='line'>        "path" : "",
+</span><span class='line'>        "username" : "",
+</span><span class='line'>        "password" : "",
+</span><span class='line'>        "publicUrl": ""
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>Once you&rsquo;ve added your server details you can start using the</p>
+
+<div class="codeblock-terminal">
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ grunt deploy:staging
+</span><span class='line'>and
+</span><span class='line'>$ grunt deploy:prod</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+
+
+<p>tasks to move your project to the server.</p>
+
+<blockquote><p>Please note, that at the moment both deployment tasks use the generic <code>build</code> task, which will completely minify and gzip the project files, which not might be handy for debugging on the server. I am planning to add a soft build task for staging deployment to improve this.</p></blockquote>
+
+<p>By default Sizzle ignores <code>secret.json</code> file. I&rsquo;d strongly advise not to change this, otherwise you might end up unintentially sharing your server credentials with others when you push your code with git.</p>
+
+<blockquote><p>Another thing to keep in mind is that when you deploy, the script cleans the remote destination folder completely. If you want to change this behaviour, simply update the <code>stfp</code> task configuration.</p></blockquote>
+
+<p>Once the deployment process finishes Grunt opens your site&rsquo;s URL in Chrome, which I find pretty handy.</p>
+
+<hr />
+
+<h2>Wrapping it up</h2>
+
+<p>Another good thing I&rsquo;ve found about Sizzle, is that it can be used in any back-end project without a problem. I&rsquo;ve used Sizzle with Rails, and with Laravel as well - and (of course with some reconfiguration) they seemed to like each other.</p>
+
+<p>I hope Sizzle makes sense and will be a useful little tool for other developers too.</p>
+
+<p>I would love to hear your thoughts on how you find using my generator, and of course if there is any bugs or improvements you&rsquo;d like to address, please get in touch. <a class="link" href="https://github.com/robertpataki/generator-sizzle" target="_blank">The code is hosted on Github, any sensible contributions are welcome.</a></p>
+
+<p>I wish you happy coding, and I&rsquo;d like to invite you to leave your comments below :)</p>
+
+</div>
+
+            
+            
+            <div class="entry-comments">
+                <div id="comments" class="clear">
+                    <h2>Comments</h2>
+                    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+	</section>
+
+	<footer class="footer">
+	<div class="l-container">
+		<div class="footer_wrapper">
+			<p class="footer_contents">Code, recipes and other stories written by <a href="https://robertpataki.com" title="Rob Pataki's digital portfolio">Rob Pataki</a> using <a href="https://octopress.org/2011/07/23/octopress-20-surfaces/" title="Octopress 2.0" target="_blank">Octopress 2.0</a></p>
+		</div>
+	</div>
+</footer>
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19326313-17']);
+    _gaq.push(['_trackPageview']);
+    // _gaq.push(['_setDomainName','github.io']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'helloyesthisisblog';
+      
+        
+        var disqus_developer = 1;
+        var disqus_identifier = 'https://blog.robertpataki.com/2014/12/19/generator-sizzle/';
+        var disqus_url = 'https://blog.robertpataki.com/2014/12/19/generator-sizzle/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+  <script type="text/javascript" src="/javascripts/vendor/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/javascripts/vendor/fastclick.js"></script>
+	<script type="text/javascript" src="/javascripts/vendor/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/javascripts/application.js"></script>
+</body>
+</html>

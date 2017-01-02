@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: story | Hello. Yes, this is blog.]]></title>
+  <link href="https://blog.robertpataki.com//categories/story/atom.xml" rel="self"/>
+  <link href="https://blog.robertpataki.com/"/>
+  <updated>2017-01-02T12:41:40+00:00</updated>
+  <id>https://blog.robertpataki.com/</id>
+  <author>
+    <name><![CDATA[Robert Pataki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello blog!]]></title>
+    <link href="https://blog.robertpataki.com/2014/09/19/hello-yes-this-is-blog/"/>
+    <updated>2014-09-19T18:00:00+01:00</updated>
+    <id>https://blog.robertpataki.com/2014/09/19/hello-yes-this-is-blog</id>
+    <content type="html"><![CDATA[<p class="post-intro">I&#8217;m glad you&#8217;ve found my blog, welcome!</p>
+
+
+<h2>A very quick introduction&hellip; to myself and the blog</h2>
+
+<p>To keep the blog very simple I am not planning to add an obligatory &lsquo;About&rsquo; page, so let me quickly introduce myself: I am <a class="link" href="http://robertpataki.com">Rob Pataki</a>, a full stack web developer from Budapest (Hungary), living and working in the colourful East London since late 2009.</p>
+
+<p>This is my third attempt to have a decent blog, and this time I promise I won&rsquo;t let myself to be distracted by silly things, and I will actually write stuff. Here I am planning to write about things I love to do with true passion: coding, vegan cooking, and everything that comes along. No big plans, just want to keep it simple really.</p>
+
+<p>If you think writing about JavaScript and vegan cooking in one platform is a bit of a strange thing, probably you&rsquo;re right. But we are all different and I like to think that creativity should be practiced and gained through different (often unrelated) subjects. I love experimenting with vegetables in the kitchen just as much as I do with HMTML, JavaScript, and CSS.</p>
+
+<h2>A bit about the technical stuff</h2>
+
+<p>The blog has been built using Octopress - but I have to admit I ripped out many many things from the original kit (and as you can see the UI is completely custom made as well), in order to keep it very simple and to focus more on writing than hacking.</p>
+
+<p>I want to have a platform, where I can publish my thoughts and make it easy and enjoyeable for the audience to read. One of my main goals is to have a clean and easy to navigate site, which I can keep lean, and only add features and functionality to it when I need to. (Of course that&rsquo;s also a pleasureable part, because as a developer I still want to have fun building my site right? :))</p>
+
+<p>And this is pretty much I can think of as an introductory post :)</p>
+
+<p>I hope you&rsquo;ll enjoy my new blog!</p>
+]]></content>
+  </entry>
+  
+</feed>
