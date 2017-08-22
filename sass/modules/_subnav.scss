@@ -100,6 +100,7 @@ $metrics-subnav-button-size: $metrics-header-height * 0.75;
 		border: none;
 		margin-bottom: 0;
 		border-bottom: 1px solid $color-highlighted-text;
+		border-radius: 0;
 
 		@include rempix(height, $metrics-header-height);
 
