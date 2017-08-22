@@ -7,23 +7,11 @@
 
 	figure.code {
 		@include rempix(padding, 12px);
-		border: $color-body-text;
+		border-radius: $metrics-border-radius;
+		border-top: 12px solid lighten($color-highlighted-text, 10%);
 		font-size: 14px;
 		line-height: 21px;
 		background: lighten($color-highlighted-text, 60%);
-
-		&:before {
-			content: " ";
-			display: block;
-			position: absolute;
-			top: -12px;
-			left: -1px;
-			height: 12px;
-			width: 100%;
-			background: $color-highlighted-text;
-			border-left: $color-highlighted-text;
-			border-right: $color-highlighted-text;
-		}
 	}
 
 	.highlight {
