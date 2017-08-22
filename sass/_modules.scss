@@ -17,6 +17,7 @@
 
 .header_placeholder {
 	position: relative;
+	background: $color-header-background;
 	@include rempix(height, $metrics-header-height);
 	@include media($breakpoint-3-tablet-portrait) {
 		display: none;
