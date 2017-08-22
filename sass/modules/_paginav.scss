@@ -31,6 +31,7 @@
 	@extend .font-headline;
 	font-weight: 200;
 	border: 1px solid $color-header-background;
+	border-radius: $metrics-border-radius;
 	color: $color-header-background;
 	text-transform: uppercase;
 	text-align: center;

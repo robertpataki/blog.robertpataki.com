@@ -55,7 +55,7 @@
 
 .post-container {
 	background: $color-header-background;
-	border-radius: 10px;
+	border-radius: $metrics-border-radius;
 	overflow: hidden;
 
 	margin-bottom: rhythm(1);
@@ -188,7 +188,7 @@
 	width: 100%;
 	height: auto;
 	padding: rhythm(0.1);
-	border: 1px solid lighten($color-body-text, 60%);
+	border-radius: $metrics-border-radius;
 }
 
 // States
