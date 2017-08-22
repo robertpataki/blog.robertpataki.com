@@ -5,6 +5,7 @@ intro: "A very simple implementation of the singleton pattern in RequireJS (with
 date: 2015-08-04 09:17:07 +0100
 comments: true
 hero: "/images/posts/general-hero.png"
+category_group: coding
 categories: coding javascript requirejs singleton
 ---
 

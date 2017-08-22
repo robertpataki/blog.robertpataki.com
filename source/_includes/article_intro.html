@@ -6,7 +6,7 @@
 			{% if category != '0' %}
 			<div class="post-categories">
 				{% for category in post.categories %}
-		  			<span class="post-category">{{ category }}</span>
+					<span class="post-category post-category--{{ post.category_group }}">{{ category }}</span>
 				{% endfor %}
 			</div>
 			{% endif %}

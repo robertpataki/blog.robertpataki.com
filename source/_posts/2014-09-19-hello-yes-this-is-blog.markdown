@@ -5,6 +5,7 @@ intro: "Obligatory 'Hello world' post - kept as short as possible."
 date: 2014-09-19 18:00:00 +0100
 hero: "/images/posts/hello-yes-this-is-blog-hero.jpg"
 comments: true
+category_group: misc
 categories: story
 ---
 

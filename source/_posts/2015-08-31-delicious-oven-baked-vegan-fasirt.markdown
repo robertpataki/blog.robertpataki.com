@@ -5,6 +5,7 @@ intro: "My vegan alternative of the traditional Hungarian fasirt"
 hero: "/images/posts/vegan-fasirt-hero.jpg"
 date: 2015-08-31 12:58:01 +0100
 comments: true
+category_group: cooking
 categories: vegan recipe fasirt falafel
 ---
 

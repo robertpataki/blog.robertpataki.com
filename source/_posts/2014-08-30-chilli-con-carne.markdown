@@ -5,6 +5,7 @@ intro: "Lots of beans and soya mince for the ultimate mexican experience"
 date: 2014-11-09 13:26:00 +0100
 hero: "/images/posts/chilli-con-carne-hero.jpg"
 comments: true
+category_group: cooking
 categories: vegan recipe
 ---
 

@@ -6,6 +6,7 @@ hero: "/images/posts/i-thought-it-was-italian-hero.jpg"
 date: 2014-08-30 22:00:24 +0100
 comments: true
 categories: vegan recipe
+category_group: cooking
 published: false
 ---
 

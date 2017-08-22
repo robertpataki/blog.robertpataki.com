@@ -6,6 +6,7 @@ date: 2014-12-19 15:50:06 +0000
 updated: 2015-01-13 14:00:00 +0000
 hero: "/images/posts/generator-sizzle-hero.png"
 comments: true
+category_group: coding
 categories: coding yeoman
 ---
 

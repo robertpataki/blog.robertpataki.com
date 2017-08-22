@@ -5,6 +5,7 @@ intro: "Hacking some vegan stuffing into mushrooms - it tastes a lot better than
 hero: "/images/posts/stuffed-portobello-mushrooms-hero.jpg"
 date: 2014-09-19 18:00:00 +0100
 comments: true
+category_group: cooking
 categories: vegan recipe
 published: true
 ---

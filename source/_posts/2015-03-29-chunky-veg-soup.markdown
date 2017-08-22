@@ -5,6 +5,7 @@ intro: "The easiest thing to do with veg is to cook them into a delicious soup!"
 date: 2015-03-29 21:38:45 +0100
 hero: "/images/posts/chunky-veg-soup-hero.jpg"
 comments: true
+category_group: cooking
 categories: vegan recipe
 published: true
 ---

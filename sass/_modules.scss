@@ -161,12 +161,21 @@
 .post-category {
 	@include rempix(padding, 2px 6px 4px 6px);
 	border-radius: 2px;
-	background: $color-go-green;
+	background: $color-go-light-blue;
 	color: $color-body-text-invert;
 	font-size: 51%;
 	@extend .font-headline;
 	font-weight: 200;
 	opacity: 0.6;
+
+	&.post-category--coding {
+		background: $color-go-mid-blue;
+	}
+
+	&.post-category--cooking {
+
+		background: $color-go-green;
+	}
 }
 .post-date-intro {
 	@extend .font-headline;
